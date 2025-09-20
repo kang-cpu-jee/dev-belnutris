@@ -17,10 +17,11 @@
     {%- endunless -%}
 
     <title>
+      <!-- DEV-BELNUTRIS THEME - EDITED VIA VS CODE -->
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }} - Development Mode{% endunless -%}
     </title>
 
     {% if page_description %}

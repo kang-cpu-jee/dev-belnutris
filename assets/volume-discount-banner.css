@@ -1,0 +1,130 @@
+.volume-discount-section {
+  margin-bottom: 20px;
+}
+
+.volume-discount-banner {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px auto;
+  border: 1px solid #e3f2fd;
+  max-width: 100%;
+}
+
+.volume-discount__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1565c0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.volume-discount__progress-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.volume-discount__progress-bar {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.volume-discount__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffa726 0%, #ff9800 50%, #f57c00 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  width: 0%;
+}
+
+.volume-discount__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  position: relative;
+}
+
+.volume-discount__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.volume-discount__label.active {
+  color: #1565c0;
+  font-weight: 600;
+  transform: scale(1.1);
+}
+
+.volume-discount__label::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 4px;
+  background-color: #999;
+}
+
+.volume-discount__badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.volume-discount__badge {
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+  min-width: 50px;
+  text-align: center;
+  cursor: default;
+}
+
+.volume-discount__badge.highlighted {
+  background-color: #1565c0;
+  color: white;
+  border-color: #1565c0;
+  box-shadow: 0 2px 8px rgba(21, 101, 192, 0.3);
+  transform: scale(1.05);
+}
+
+.volume-discount__badge.active:not(.highlighted) {
+  background-color: #e3f2fd;
+  border-color: #90caf9;
+  color: #1565c0;
+}
+
+@media screen and (max-width: 749px) {
+  .volume-discount-banner {
+    padding: 16px;
+    margin: 16px auto;
+  }
+  
+  .volume-discount__title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .volume-discount__badges {
+    gap: 8px;
+  }
+  
+  .volume-discount__badge {
+    padding: 6px 12px;
+    font-size: 13px;
+    min-width: 45px;
+  }
+}

@@ -441,9 +441,25 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "volume_discount_banner_dyz39D": {
+      "type": "volume-discount-banner",
+      "name": "Volume Discount Banner",
+      "settings": {
+        "title": "Ưu đãi giảm giá khi mua nhiều sản phẩm",
+        "label_off": "OFF",
+        "discount_1": "5%",
+        "discount_2": "10%",
+        "discount_3": "15%",
+        "qty_1": "1x",
+        "qty_2": "2x",
+        "qty_3": "3x",
+        "qty_4": ">3x"
+      }
     }
   },
   "order": [
+    "volume_discount_banner_dyz39D",
     "main",
     "custom_liquid_Fq83mt",
     "custom_liquid_TmtJ7X",

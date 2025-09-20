@@ -1,0 +1,122 @@
+{{ 'volume-discount-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="volume-discount-section" data-section-id="{{ section.id }}">
+  <!-- DEBUG: Volume Discount Banner Loaded Successfully -->
+  <div class="page-width">
+    <div class="volume-discount-banner">
+      <div class="volume-discount__content">
+        <h3 class="volume-discount__title">{{ section.settings.title | default: "Ưu đãi giảm giá khi mua nhiều sản phẩm" }}</h3>
+        
+        <div class="volume-discount__progress-container">
+          <!-- Progress Bar Background -->
+          <div class="volume-discount__progress-bar">
+            <div class="volume-discount__progress-fill" data-progress-fill></div>
+          </div>
+          
+          <!-- Discount Labels -->
+          <div class="volume-discount__labels">
+            <span class="volume-discount__label" data-level="0">
+              {{ section.settings.label_off | default: "OFF" }}
+            </span>
+            <span class="volume-discount__label" data-level="1">
+              {{ section.settings.discount_1 | default: "5%" }}
+            </span>
+            <span class="volume-discount__label" data-level="2">
+              {{ section.settings.discount_2 | default: "10%" }}
+            </span>
+            <span class="volume-discount__label" data-level="3">
+              {{ section.settings.discount_3 | default: "15%" }}
+            </span>
+          </div>
+        </div>
+        
+        <!-- Quantity Badges -->
+        <div class="volume-discount__badges">
+          <span class="volume-discount__badge" data-qty="1">
+            {{ section.settings.qty_1 | default: "1x" }}
+          </span>
+          <span class="volume-discount__badge" data-qty="2">
+            {{ section.settings.qty_2 | default: "2x" }}
+          </span>
+          <span class="volume-discount__badge" data-qty="3">
+            {{ section.settings.qty_3 | default: "3x" }}
+          </span>
+          <span class="volume-discount__badge" data-qty="4">
+            {{ section.settings.qty_4 | default: ">3x" }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'volume-discount-banner.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Volume Discount Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Ưu đãi giảm giá khi mua nhiều sản phẩm",
+      "label": "Banner Title"
+    },
+    {
+      "type": "text",
+      "id": "label_off",
+      "default": "OFF",
+      "label": "Label for no discount"
+    },
+    {
+      "type": "text",
+      "id": "discount_1",
+      "default": "5%",
+      "label": "First discount level (2x)"
+    },
+    {
+      "type": "text",
+      "id": "discount_2",
+      "default": "10%",
+      "label": "Second discount level (3x)"
+    },
+    {
+      "type": "text",
+      "id": "discount_3",
+      "default": "15%",
+      "label": "Third discount level (>3x)"
+    },
+    {
+      "type": "text",
+      "id": "qty_1",
+      "default": "1x",
+      "label": "Quantity 1 label"
+    },
+    {
+      "type": "text",
+      "id": "qty_2",
+      "default": "2x",
+      "label": "Quantity 2 label"
+    },
+    {
+      "type": "text",
+      "id": "qty_3",
+      "default": "3x",
+      "label": "Quantity 3 label"
+    },
+    {
+      "type": "text",
+      "id": "qty_4",
+      "default": ">3x",
+      "label": "Quantity 4+ label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Volume Discount Banner"
+    }
+  ]
+}
+{% endschema %}

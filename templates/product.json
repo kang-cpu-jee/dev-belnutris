@@ -153,6 +153,12 @@
         "padding_bottom": 36
       }
     },
+    "volume_discount_banner": {
+      "type": "volume-discount-banner",
+      "settings": {
+        "title": "Ưu đãi giảm giá khi mua nhiều sản phẩm"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -174,6 +180,7 @@
   },
   "order": [
     "main",
+    "volume_discount_banner",
     "collapsible_content_QenkBW",
     "related-products"
   ]
