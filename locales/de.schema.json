@@ -2012,6 +2012,10 @@
             "heading_3": {
               "label": "Dritte Überschrift",
               "default": "Titel"
+            },
+            "custom_class": {
+              "label": "Benutzerdefinierte CSS-Klasse",
+              "info": "Füge benutzerdefinierte CSS-Klassen hinzu (mit Leerzeichen getrennt, falls mehrere)"
             }
           }
         },

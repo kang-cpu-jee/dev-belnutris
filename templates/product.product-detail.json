@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "volume_discount_banner_dyz39D": {
+      "type": "volume-discount-banner",
+      "name": "Volume Discount Banner",
+      "settings": {
+        "title": "Ưu đãi giảm giá khi mua nhiều sản phẩm",
+        "label_off": "OFF",
+        "discount_1": "5%",
+        "discount_2": "10%",
+        "discount_3": "15%",
+        "qty_1": "1x",
+        "qty_2": "2x",
+        "qty_3": "3x",
+        "qty_4": ">3x"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -22,52 +37,70 @@
           "type": "title",
           "settings": {}
         },
-        "icon_with_text_HRWUcf": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "none",
-            "image_1": "shopify://shop_images/Group_13440.png",
-            "heading_1": "Titel",
-            "icon_2": "none",
-            "image_2": "shopify://shop_images/Group_13440.png",
-            "heading_2": "Titel",
-            "icon_3": "none",
-            "image_3": "shopify://shop_images/Group_13440.png",
-            "heading_3": "Titel"
-          }
-        },
-        "description_Ryt8D3": {
-          "type": "description",
-          "settings": {}
-        },
-        "price_zVY7CV": {
-          "type": "price",
-          "settings": {}
-        },
         "custom_liquid_Qw3bbh": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<div class=\"volumen\">\n{{product.metafields.custom.infor_product}}\n{{product.metafields.custom.infor_product_text}}\n</div>"
           }
         },
+        "rating_Tr3XpX": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price_zVY7CV": {
+          "type": "price",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
+          "settings": {}
+        },
+        "description_Ryt8D3": {
+          "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons_MK44it": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
           }
         },
         "custom_liquid_C8n6ch": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"decription\" >{{ product.metafields.custom.short_decription }}</div>\n<style>\n.decription{\nopacity:1;\n    color: #07478a;\n}\n</style>"
+          }
+        },
+        "icon_with_text_HRWUcf": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Group_13720.png",
+            "heading_1": "Unterstützt Stoffwechsel, Immunsystem & Energielevel",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/Group_13719.png",
+            "heading_2": "Mit hochwertigen Proteinen, die zum Erhalt & Aufbau von Muskelmasse beitragen",
+            "icon_3": "none",
+            "image_3": "shopify://shop_images/Group_13717.png",
+            "heading_3": "Reich an Calcium & Vitamin D für Knochen & Bewegungsapparat"
+          }
+        },
+        "icon_with_text_RBmJtQ": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/Group_13718.png",
+            "heading_1": "Sättigende Zwischenmahlzeit oder vollwertige Ergänzung",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Group_13715.png",
+            "heading_2": "Essentielle Vitamine & Mineralstoffe",
+            "icon_3": "truck",
+            "image_3": "shopify://shop_images/Group_13716.png",
+            "heading_3": "Ideal für einen aktiven Lebensstil & tägliche Rundum-Versorgung"
           }
         },
         "collapsible_tab_AddRK8": {
@@ -101,13 +134,15 @@
       "block_order": [
         "custom_liquid_jr7bBY",
         "title",
-        "icon_with_text_HRWUcf",
-        "description_Ryt8D3",
-        "price_zVY7CV",
         "custom_liquid_Qw3bbh",
+        "rating_Tr3XpX",
+        "price_zVY7CV",
         "quantity_selector",
+        "description_Ryt8D3",
         "buy_buttons_MK44it",
         "custom_liquid_C8n6ch",
+        "icon_with_text_HRWUcf",
+        "icon_with_text_RBmJtQ",
         "collapsible_tab_AddRK8",
         "collapsible_tab_r7aXXN",
         "collapsible_tab_DMXfh6"
@@ -440,21 +475,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
-      }
-    },
-    "volume_discount_banner_dyz39D": {
-      "type": "volume-discount-banner",
-      "name": "Volume Discount Banner",
-      "settings": {
-        "title": "Ưu đãi giảm giá khi mua nhiều sản phẩm",
-        "label_off": "OFF",
-        "discount_1": "5%",
-        "discount_2": "10%",
-        "discount_3": "15%",
-        "qty_1": "1x",
-        "qty_2": "2x",
-        "qty_3": "3x",
-        "qty_4": ">3x"
       }
     }
   },

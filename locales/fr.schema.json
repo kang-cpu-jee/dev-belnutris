@@ -2012,6 +2012,10 @@
             "heading_3": {
               "label": "Troisième titre",
               "default": "Titre"
+            },
+            "custom_class": {
+              "label": "Classe CSS personnalisée",
+              "info": "Ajouter des classes CSS personnalisées (séparées par des espaces si plusieurs)"
             }
           }
         },

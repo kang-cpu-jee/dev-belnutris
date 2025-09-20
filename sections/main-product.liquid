@@ -105,9 +105,11 @@
                     </h2>
                   </a>
                 </div>
-                {% if product.metafields.descriptors.subtitle %}
-                   <p class="volumen">{{ product.metafields.descriptors.subtitle }}</p>
-                {% endif %}
+                {% comment %}
+                  {% if product.metafields.descriptors.subtitle %}
+                     <p class="volumen">{{ product.metafields.descriptors.subtitle }}</p>
+                  {% endif %}
+                {% endcomment %}
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -2075,6 +2077,16 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        },
+        {
+          "type": "header",
+          "content": "Custom CSS"
+        },
+        {
+          "type": "text",
+          "id": "custom_class",
+          "label": "Custom CSS Class",
+          "info": "Add custom CSS classes (separated by spaces if multiple)"
         }
       ]
     }

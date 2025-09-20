@@ -2373,6 +2373,10 @@
             "heading_3": {
               "label": "Third heading",
               "default": "Heading"
+            },
+            "custom_class": {
+              "label": "Custom CSS Class",
+              "info": "Add custom CSS classes (separated by spaces if multiple)"
             }
           }
         }

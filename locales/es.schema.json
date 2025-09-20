@@ -2013,6 +2013,10 @@
             "heading_3": {
               "label": "Tercer encabezado",
               "default": "Encabezado"
+            },
+            "custom_class": {
+              "label": "Clase CSS personalizada",
+              "info": "Agregar clases CSS personalizadas (separadas por espacios si hay varias)"
             }
           }
         },

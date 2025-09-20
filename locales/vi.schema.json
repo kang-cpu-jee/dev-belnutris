@@ -2013,6 +2013,10 @@
             "heading_3": {
               "label": "Tiêu đề thứ ba",
               "default": "Tiêu đề"
+            },
+            "custom_class": {
+              "label": "CSS Class tùy chỉnh",
+              "info": "Thêm các CSS class tùy chỉnh (phân cách bằng dấu cách nếu có nhiều)"
             }
           }
         },
