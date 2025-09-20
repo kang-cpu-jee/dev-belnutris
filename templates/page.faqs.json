@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        ".breadcrumbs {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_3kFkc4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DzqJ7h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Häufig gestellte Fragen",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DzqJ7h"
+      ],
+      "custom_css": [
+        "@media (max-width: 480px) {.rich-text__heading {text-align: left; }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_cLTrw9": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_kXfaJj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich Nahrungsergänzungsmittel (NEM) einnehmen, wenn ich gesundheitliche Probleme habe oder Medikamente einnehme?",
+            "icon": "none",
+            "row_content": "<p>Wenn du gesundheitliche Probleme hast oder regelmäßig Medikamente einnimmst, ist es wichtig, mögliche Wechselwirkungen mit den Nahrungsergänzungsmitteln zu berücksichtigen. Wir empfehlen, vor der Einnahme neuer Produkte immer Rücksprache mit deinem Arzt, Apotheker oder einem qualifizierten Ernährungsexperten zu halten, um sicherzustellen, dass die Ergänzungen für dich geeignet sind.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JiGDrU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie wähle ich das richtige NEM basierend auf meinen Gesundheitszielen aus?",
+            "icon": "none",
+            "row_content": "<p>Um das richtige Nahrungsergänzungsmittel auszuwählen, ist es wichtig, deine spezifischen Gesundheitsziele zu definieren. Überlege, ob du deine allgemeine Gesundheit unterstützen, deine Energie steigern, dein Immunsystem stärken oder Well-Aging-Ziele verfolgen möchtest. Einige häufige Ziele und passende Ergänzungen könnten sein:</p><p><strong>Energie und Vitalität:</strong> Vitamin-B-Komplexe sowie Mineralstoffe wie Zink und Eisen in Kombination mit einer eiweiß-betonten Ernährung.</p><p><strong>Anti-entzündlich & Immunsystem stärkend</strong>: Vitamin C, Zink, Kurkuma und Weihrauch.</p><p><strong>Knochen- und Gelenkgesundheit</strong>: Produkte mit Calcium, Magnesium, Vitamin D oder Glucosamin.</p><p><strong>Haut- und UV-Schutz</strong>: Biotin, Zink, Vitamin E, Beta-Carotin</p><p></p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cWqRYe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie erfolgt der Versand meiner Bestellung?",
+            "icon": "none",
+            "row_content": "<p>Der Versand deiner Bestellung erfolgt in der Regel innerhalb von 2-3 Werktagen nach Bestelleingang. Die Lieferkosten sind abhängig vom Bestellvolumen und variieren je nach Lieferadresse. Detaillierte Informationen zu den Versandoptionen und -kosten findest du in der Rubrik \"Zahlung und Versand\" im Footer unserer Website. Bei weiteren Fragen zum Versand stehen wir dir gerne zur Verfügung.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TnkPXC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welche Zahlungsmethoden kann ich nutzen?",
+            "icon": "none",
+            "row_content": "<p>Du kannst deine Bestellung bequem mit verschiedenen Zahlungsmethoden bezahlen, darunter Kreditkarte, Apple Pay, Google Pay und PayPal. Weitere Informationen zu den verfügbaren Zahlungsmethoden findest du in der Rubrik \"Zahlung und Versand\".</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PKyNxB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie löse ich einen Gutscheincode ein?",
+            "icon": "none",
+            "row_content": "<p>Du kannst deinen Gutscheincode ganz einfach während des Checkouts einlösen. Trage den Code im dafür vorgesehenen Feld ein, und der Rabatt wird automatisch von deinem Gesamtbetrag abgezogen.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_kXfaJj",
+        "collapsible_row_JiGDrU",
+        "collapsible_row_cWqRYe",
+        "collapsible_row_TnkPXC",
+        "collapsible_row_PKyNxB"
+      ],
+      "custom_css": [
+        ".collapsible-content-wrapper-narrow {max-width: 1280px; display: flex; gap: 50px;}",
+        ".collapsible-content__header {width: 50%;}",
+        ".grid {width: 50%;}",
+        ".caption-with-letter-spacing {letter-spacing: normal; font-size: 18px; line-height: 24px; color: #07478a; text-transform: initial;}",
+        ".accordion {border-bottom: 2px solid #07478a;}",
+        ".accordion__content p {color: #000;}",
+        "@media (max-width: 480px) {.collapsible-content__wrapper {padding-top: 30px; }}"
+      ],
+      "settings": {
+        "caption": "Diese FAQ-Seite bietet Antworten auf häufig gestellte Fragen zu unseren Produkten, Versand, Rücksendungen und mehr. Wenn du weitere Fragen hast oder zusätzliche Informationen benötigst, zögere bitte nicht, uns zu kontaktieren. Wir sind gerne für dich da.",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_3kFkc4",
+    "collapsible_content_cLTrw9"
+  ]
+}

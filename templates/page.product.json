@@ -1,0 +1,155 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        ".breadcrumbs {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_QniPNM": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/smiling-multi-generation-mixed-race-family-in-gard-2024-10-19-16-19-28-utc.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "top-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": true
+      }
+    },
+    "rich_text_c9ACqt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_irinqf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Produkte",
+            "heading_size": "h1"
+          }
+        },
+        "text_pPDnmU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Entdecke unsere Belnutris-Produkte. Jedes Produkt ist darauf ausgerichtet, deinen Stoffwechsel zu optimieren und deine Gesundheit zu fördern.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_irinqf",
+        "text_pPDnmU"
+      ],
+      "custom_css": [
+        ".rich-text__blocks {max-width: 580px;}",
+        ".rich-text__text {color: #07478a; font-style: normal; font-weight: 500; font-size: 18px; line-height: 24px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_XtbFUX": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".card-wrapper {border: 1px solid #fffff; border-radius: 5px;}",
+        ".card__inner {background: transparent; max-height: 240px; margin-top: 30px; margin-bottom: 30px;}",
+        ".card__media {display: flex; justify-content: center; align-items: center;}",
+        ".card__media .media,img {object-fit: contain;}",
+        ".card__content {padding: 15px 30px 30px;}",
+        ".card__heading {font-size: 18px; line-height: 24px; padding-bottom: 14px;}",
+        ".price {font-size: 14px; line-height: 130%; color: #b0b0b0;}"
+      ],
+      "settings": {
+        "title": "Nahrungsergänzungsmittel",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "blutzucker-balance",
+        "products_to_show": 7,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 48
+      }
+    },
+    "featured_collection_raRLWx": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".card-wrapper {border: 1px solid #fffff; border-radius: 5px;}",
+        ".card__inner {background: transparent; max-height: 413px;}",
+        ".card__media {display: flex; justify-content: center; align-items: center;}",
+        ".card__media .media,img {object-fit: contain;}",
+        ".card__content {padding: 15px 30px 30px;}",
+        ".card__heading {font-size: 18px; line-height: 24px; padding-bottom: 14px;}",
+        ".price {font-size: 14px; line-height: 130%; color: #b0b0b0;}"
+      ],
+      "settings": {
+        "title": "Pulverdrink",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "minerals",
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_QniPNM",
+    "rich_text_c9ACqt",
+    "featured_collection_XtbFUX",
+    "featured_collection_raRLWx"
+  ]
+}

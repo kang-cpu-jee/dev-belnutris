@@ -1,0 +1,464 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_liquid_jr7bBY": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.collections.size > 0 %}\n    <ul class=\"collections-list\">\n      {% for collection in product.collections %}\n        <li><a href=\"{{ collection.url }}\">{{ collection.title }} <span>,</span></a></li>\n      {% endfor %}\n    </ul>\n{% endif %}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "icon_with_text_HRWUcf": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Group_13440.png",
+            "heading_1": "Titel",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/Group_13440.png",
+            "heading_2": "Titel",
+            "icon_3": "none",
+            "image_3": "shopify://shop_images/Group_13440.png",
+            "heading_3": "Titel"
+          }
+        },
+        "description_Ryt8D3": {
+          "type": "description",
+          "settings": {}
+        },
+        "price_zVY7CV": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_liquid_Qw3bbh": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"volumen\">\n{{product.metafields.custom.infor_product}}\n{{product.metafields.custom.infor_product_text}}\n</div>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_MK44it": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_C8n6ch": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"decription\" >{{ product.metafields.custom.short_decription }}</div>\n<style>\n.decription{\nopacity:1;\n    color: #07478a;\n}\n</style>"
+          }
+        },
+        "collapsible_tab_AddRK8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Inhaltsstoffe",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.ingredients_content | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_r7aXXN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Anwendung",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.custom_tab_content | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_DMXfh6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Hinweise",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.content_target_use | metafield_tag }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_jr7bBY",
+        "title",
+        "icon_with_text_HRWUcf",
+        "description_Ryt8D3",
+        "price_zVY7CV",
+        "custom_liquid_Qw3bbh",
+        "quantity_selector",
+        "buy_buttons_MK44it",
+        "custom_liquid_C8n6ch",
+        "collapsible_tab_AddRK8",
+        "collapsible_tab_r7aXXN",
+        "collapsible_tab_DMXfh6"
+      ],
+      "custom_css": [
+        "slider-component {max-height: 560px;}",
+        ".product__media-list .media-type-image .product__media {height: 560px;}",
+        "slider-component img {max-height: 450px; object-fit: contain; border: 0;}",
+        "slider-component .media-type-image {border: 0;}",
+        ".thumbnail img {max-width: 50px; max-height: 50px;}",
+        ".thumbnail {box-shadow: none; border-radius: px;}",
+        ".category {font-size: 18px; line-height: 24px; color: #07478a;}",
+        ".product__title {margin: 0;}",
+        ".product__title h1 {font-size: 46px; line-height: 50px;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_Fq83mt": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"page-width sec-decription w-980\">\n  {{ product.description }}\n</div>",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_TmtJ7X": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".w-980 {max-width: 1400px;}"
+      ],
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_content_1 %}\n<div class=\"container-page\">\n<div class=\"text\">\n{{ product.metafields.custom.product_layout_content_1 | metafield_tag }}\n</div>\n<div class=\"image\">\n{{ product.metafields.custom.product_layout_image_1 | metafield_tag }}\n</div>  \n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_J9pBgn": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_content_2 %}\n<div class=\"container-page container-page-two\">\n<div class=\"image\">\n{{ product.metafields.custom.product_layout_image_2 | metafield_tag }}\n</div>  \n<div class=\"text\">\n{{ product.metafields.custom.product_layout_content_2 | metafield_tag }}\n</div>\n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_6iP44m": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_3 %}\n<div class=\"container-page-style-one\">\n                <h2>{{ product.metafields.custom.product_layout_content_title_3 | metafield_tag }}</h2>\n                <div class=\"container-page\">\n                    <div class=\"text\">\n                        {{ product.metafields.custom.product_layout_content_left_3 | metafield_tag }}\n                    </div>\n                    <div class=\"image\">\n                        {{ product.metafields.custom.product_layout_content_image_3 | metafield_tag }}\n                    </div>\n                    <div class=\"text\">\n                        {{ product.metafields.custom.product_layout_content_right_3 | metafield_tag }}\n                    </div>\n                </div>\n            </div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_XgzNRw": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_title_4 %}\n<div class=\"container-page\">\n<div class=\"image\">\n{{ product.metafields.custom.product_layout_image_4 | metafield_tag }}\n</div>  \n<div class=\"text\">\n<h2>{{ product.metafields.custom.product_layout_title_4 | metafield_tag }}</h2>\n<div class=\"accordion-container\">\n    {% assign titles = product.metafields.custom.product_layout_title_accordion_4.value %}\n    {% assign contents = product.metafields.custom.product_layout_content_accordion_4.value %}\n\n    {% if titles and contents %}\n        {% for title in titles %}\n            {% assign index = forloop.index0 %}\n            {% assign content = contents[index] %}\n\n            <button class=\"collapsible\">{{ title }}</button>\n            <div class=\"content\" style=\"text-align: left;\"><p>{{ content }}</p></div>\n        {% endfor %}\n    {% endif %}\n</div>\n</div>\n</div>\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function () {\nconst collapsibles = document.querySelectorAll(\".collapsible\");\n\ncollapsibles.forEach((button) => {\nbutton.addEventListener(\"click\", () => {\n// Toggle active class\nbutton.classList.toggle(\"active\");\n\n// Get the associated content div\nconst content = button.nextElementSibling;\n  if (content.style.maxHeight) {\n    // Close the content\n    content.style.maxHeight = null;\n    content.classList.remove(\"open\");\n} else {\n    // Open the content\n    content.style.maxHeight = content.scrollHeight + \"px\";\n    content.classList.add(\"open\");\n}\n\n  });\n\n});\n\n});\n\n</script>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_879bD3": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".product-icon {width: 60px; height: auto; max-width: 100%; padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_5 %}\n<div class=\"container-page-style-two\">\n    <h2>{{ product.metafields.custom.product_layout_content_title_5 | metafield_tag }}</h2>\n    <div class=\"container-wrap\">\n        {% assign icons = product.metafields.custom.product_layout_content_item_icon_51.value %}\n        {% assign titles = product.metafields.custom.product_layout_content_item_title_51.value %}\n        {% assign texts = product.metafields.custom.product_layout_content_item_text_51.value %}\n\n        {% if icons and titles and texts %}\n        <div class=\"product-content-list\">\n            {% for icon in icons %}\n                {% assign index = forloop.index0 %}\n                {% assign title = titles[index] %}\n                {% assign text = texts[index] %}\n\n                <div class=\"product-content-item\">\n                    <img src=\"https://belnutris.com/cdn/shop/{{ icon }}\" alt=\"{{ title }}\" class=\"product-icon\">\n                    <h4 class=\"product-title\">{{ title }}</h4>\n                    <p class=\"product-text\">{{ text }}</p>\n                </div>\n            {% endfor %}\n        </div>\n        {% endif %}\n    </div>\n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_eUkjqw": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_product_table_6 %}\n<div class=\"container-page\">\n<div class=\"container-page\">\n{{ product.metafields.custom.product_layout_product_table_6 | metafield_tag }}\n</div>\n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_h6Pn6Y": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_product_detail.value %}\n<div class=\"container-page-product-detail\">\n    <h2>Produktdetails:</h2>\n    <div class=\"container-wrap\">\n        {% assign details = product.metafields.custom.product_layout_product_detail.value %}\n\n        {% if details %}\n        <div class=\"detail-list\">\n            {% for item in details %}\n                <p>{{ item }}</p>\n            {% endfor %}\n        </div>\n        {% endif %}\n    </div>\n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_kNLPyd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_8 %}\n<div class=\"container-page\">\n                <div class=\"container-page-box\">\n                    {{ product.metafields.custom.product_layout_content_image_8 | metafield_tag }}\n                    <div class=\"container-page-box-item\">\n                        <h2>{{ product.metafields.custom.product_layout_content_title_8 | metafield_tag }}</h2>\n                        {{ product.metafields.custom.product_layout_content_text_8 | metafield_tag }}\n                    </div>\n                </div>\n            </div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_hRpxz9": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<div \n  style=\"display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 20px auto; max-width: 1200px; gap: 20px; padding: 0 2cm;\">\n  \n  <!-- Linke Spalte: Titel und Text -->\n  <div \n    style=\"flex: 1; text-align: left; font-family: Arial, sans-serif; line-height: 1.6; min-width: 300px;\">\n    <h2 \n      style=\"margin-top: 0; color: #333; font-size: 24px; font-weight: bold;\">\n      {{ product.metafields.custom.title }}\n    </h2>\n    <p \n      style=\"color: #666; font-size: 16px; margin-top: 10px;\">\n      {{ product.metafields.custom.description }}\n    </p>\n  </div>\n\n  <!-- Rechte Spalte: Bild -->\n  <div \n    style=\"flex: 1; text-align: center; position: relative; min-width: 300px;\">\n    <img \n      src=\"{{ product.metafields.custom.image | file_url }}\" \n      alt=\"Produktbild\" \n      style=\"max-width: 100%; height: auto; border-radius: 8px; animation: float 2.5s ease-in-out infinite; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);\">\n  </div>\n</div>\n\n\n<style>\n@media (max-width: 768px) {\n  div[style*=\"display: flex\"] {\n    flex-direction: column;\n    padding: 0 1cm;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "multirow_rnT7ch": {
+      "type": "multirow",
+      "blocks": {
+        "row_ANa3a7": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/IMG_7080.jpg",
+            "caption": "",
+            "heading": "<strong>Warum Beta-Carotin+ die beste Wahl ist:</strong>",
+            "text": "<ul><li><strong>Antioxidativer UV-Schutz:</strong> Schützt deine Hautzellen vor freien Radikalen, die durch UV-Strahlen und Umweltbelastungen entstehen dank Beta-Carotin und Vitamin E.</li></ul><p></p><ul><li><strong>Anti-Aging-Wunder:</strong> Bekämpft erste Anzeichen von Hautalterung, beugt Falten vor und unterstützt die natürliche Hautregeneration für einen jugendlich-frischen Teint.</li></ul><p></p><ul><li><strong>Feuchtigkeitsspeicher:</strong> Beta-Carotin und Provitamin B5 tragen zur Stärkung der natürlichen Hautbarriere bei. Dadurch wird die Feuchtigkeit besser in der Haut gespeichert, was zu einer geschmeidigeren, hydratisierten und elastischen Haut führt.</li></ul><p></p><ul><li><strong>Gleichmäßiger Hautton:</strong> Fördert einen gesunden Glow und hilft, den Teint auszugleichen.</li></ul><p></p><ul><li><strong>Einfache Anwendung</strong>: Nur 1 Kapsel pro Tag – ideal für deinen Alltag.</li></ul>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_MX4h9W": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/IMG_7082.jpg",
+            "caption": "",
+            "heading": "<strong>Höchste Qualität – Laborgeprüft, nachhaltig und wirksam</strong>",
+            "text": "<ul><li><strong>Herstellung in Deutschland und Europa</strong>: Beta-Carotin+ wird nach höchsten Qualitätsstandards gefertigt und unter strengen Kontrollen geprüft – für maximale Reinheit, Wirksamkeit und Sicherheit.</li></ul><p></p><ul><li><strong>Schützende PET-Verpackung</strong>: Unsere hochwertige, handliche Verpackung bewahrt die Kapseln vor Feuchtigkeit und Licht, sodass ihre Qualität erhalten bleibt. Recycling-Tipp: Leere Verpackungen lassen sich recyceln – ein Plus für die Umwelt!</li></ul><p></p><ul><li><strong>Laborgeprüft und zertifiziert</strong>: Jede Kapsel durchläuft umfangreiche Tests in unabhängigen Laboren, um dir geprüfte Premium-Qualität zu garantieren.</li></ul>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_ANa3a7",
+        "row_MX4h9W"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_height": "large",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_nkDT9F": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"display: flex; flex-wrap: wrap; gap: 16px; font-family: Arial, sans-serif; line-height: 1.5;\">\n  {% assign features = product.metafields.custom.features | split: \",\" %}\n  {% for file in product.metafields.custom.feature_images %}\n    <div style=\"display: flex; flex-wrap: nowrap; margin-bottom: 24px;\">\n      <!-- Linke Spalte: Titel und Text -->\n      <div style=\"flex: 1; padding-right: 16px; box-sizing: border-box;\">\n        <h3 style=\"margin-top: 0; color: #333;\">{{ features[forloop.index0] }}</h3>\n        <p>Dies ist eine Beschreibung für {{ features[forloop.index0] }}. Passe den Text in den Produkt-Metafields an.</p>\n      </div>\n      \n      <!-- Rechte Spalte: Bild -->\n      <div style=\"flex: 1; text-align: center;\">\n        <img src=\"{{ file | file_url }}\" alt=\"{{ features[forloop.index0] }}\" style=\"max-width: 100%; border-radius: 8px;\">\n      </div>\n    </div>\n  {% endfor %}\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_UEHa6t": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_k9ka74": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Unbenanntes_Projekt_15_effb47dd-b0eb-4c0a-9597-7a870da61ac0.png",
+            "title": "<strong>Frei von künstlichen Zusatzstoffen</strong>",
+            "text": "<p>Wir verzichten konsequent auf künstliche Aromen und Farbstoffe. Jede Kapsel enthält ausschließlich sorgfältig ausgewählte Inhaltsstoffe, die deine Gesundheit optimal unterstützen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YtqbVG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Unbenanntes_Projekt_14_b73308cf-2a7b-470d-9706-b4338963a0c5.png",
+            "title": "<strong>Gentechnikfrei (GVO-frei)</strong>",
+            "text": "<p>Unsere Produkte sind 100% frei von genmanipulierten Organismen. Wir legen Wert auf natürliche Rohstoffe, die unter höchsten Standards geprüft und verarbeitet werden.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ByGrAF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Unbenanntes_Projekt_16_cd445f2c-c53e-47ce-9ed5-0e9e3af9bd93.png",
+            "title": "<strong>Transparente Inhaltsstoffe</strong>",
+            "text": "<p>Du weißt bei uns genau, was drin ist. Unsere Etiketten listen alle Inhaltsstoffe klar und verständlich auf – ohne versteckte Zusätze. Transparenz ist für uns eine Selbstverständlichkeit.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fenmAy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Unbenanntes_Projekt_17_755b722b-1f7b-4e7e-801d-a454d8c351fa.png",
+            "title": "<strong>Tierversuchsfrei und verantwortungsvoll produziert</strong>",
+            "text": "<p>Wir setzen auf ethisch verantwortungsvolle Produktionsmethoden und garantieren, dass unsere Produkte ohne Tierversuche entwickelt und hergestellt werden.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nKQ6zq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Unbenanntes_Projekt_18.png",
+            "title": "<strong>Unterstützt eine bewusste Lebensweise</strong>",
+            "text": "<p>Mit dem Pure Integrity Label entscheidest du dich für ein Produkt, das deinen Wunsch nach einem gesunden und bewussten Lebensstil unterstützt. Reinheit, Transparenz und Qualität stehen bei uns an erster Stelle.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3cpPtV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Unbenanntes_Projekt_21.png",
+            "title": "<strong>Vertrauenswürdiger Vertrieb</strong>",
+            "text": "<p>Unsere Produkte werden ausschließlich über seriöse und geprüfte Vertriebswege angeboten, damit du jederzeit auf die Echtheit und Qualität vertrauen kannst.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_k9ka74",
+        "column_YtqbVG",
+        "column_ByGrAF",
+        "column_fenmAy",
+        "column_nKQ6zq",
+        "column_3cpPtV"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Pure Integrity Label",
+        "heading_size": "h0",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 44
+      }
+    },
+    "image_banner_zmLpYr": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_XpYqX6": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<strong>Beta-Carotin+ – Dein tägliches Ritual für strahlende Haut</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_JcDFdc": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Gönn dir das gute Gefühl, alles richtig zu machen – für dich und deine Haut. Erlebe den Unterschied, den hochwertige Nahrungsergänzungsmittel für dein Hautbild machen können! Deine Haut wird es dir danken!",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XpYqX6",
+        "text_JcDFdc"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/woman-with-the-shadow-of-a-spiky-plant-on-her-face.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_Fq83mt",
+    "custom_liquid_TmtJ7X",
+    "custom_liquid_J9pBgn",
+    "custom_liquid_6iP44m",
+    "custom_liquid_XgzNRw",
+    "custom_liquid_879bD3",
+    "custom_liquid_eUkjqw",
+    "custom_liquid_h6Pn6Y",
+    "custom_liquid_kNLPyd",
+    "custom_liquid_hRpxz9",
+    "related-products",
+    "multirow_rnT7ch",
+    "custom_liquid_nkDT9F",
+    "multicolumn_UEHa6t",
+    "image_banner_zmLpYr"
+  ]
+}

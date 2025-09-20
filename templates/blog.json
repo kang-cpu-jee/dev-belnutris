@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_LAHXWh": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".tag-list {padding-left: 0; display: flex; gap: 20px; list-style: none;}",
+        ".tag-list li a.filter-button {background: #07478a; color: #fff;}",
+        ".tag-list li a {font-size: 14px; line-height: 130%; color: #000000; text-decoration: none; background: #e0e0e0; border-radius: 4px; padding: 4px 7px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n<h1>Blogs</h1>\n{% if blog.all_tags.size > 0 %}\n      <div class=\"blog-filter\">\n        <div class=\"list-group\">\n          <ul id=\"BlogTagFilter\" class=\"tag-list\">\n<li>\n            <a href=\"{{ blog.url }}\" class=\"filter-button\">\n              All\n            </a>\n          </li>\n            {% for tag in blog.all_tags %}\n            <li>\n              {{- tag | link_to_tag: tag }}\n            </li>\n            {% endfor %}\n          </ul>          \n        </div>\n      </div>\n    {% endif %} \n\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "custom_css": [
+        "h1 {display: none;}",
+        ".blog-articles {gap: 54px;}",
+        ".blog-articles__article {display: block;}",
+        ".blog-articles__article .card-wrapper {height: auto;}",
+        ".article-card__info {padding-bottom: 0px; padding-top: 0; font-size: 14px; line-height: 130%;}",
+        ".article-card__info time {color: rgba(0, 0, 0, 0.6);}",
+        ".article-card__excerpt {color: #000; overflow: hidden; text-overflow: ellipsis; line-height: 22px; -webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; margin-bottom: 0;}",
+        ".read-more {text-decoration: none; color: #07478a;}"
+      ],
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "large",
+        "show_date": true,
+        "show_author": false,
+        "show_readMore": true,
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_LAHXWh",
+    "main"
+  ]
+}

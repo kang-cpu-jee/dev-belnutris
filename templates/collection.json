@@ -1,0 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero {padding: 0;}",
+        ".collection-hero__inner {flex-flow: column; flex-direction: column-reverse; max-width: 100%; padding: 0;}",
+        ".collection-hero__image-container {margin-left: 0;}",
+        ".collection-hero__image-container {min-height: 340px;}",
+        ".collection-hero__text-wrapper {max-width: 1300px; padding-left: 5rem; padding-right: 5rem; width: 100%;}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        ".price {display: none;}",
+        ".card-wrapper {border: 1px solid #fffff; border-radius: 5px;}",
+        ".card__inner {background: transparent; max-height: 413px;}",
+        ".card__media .media,img {/* max-width: 105px; */ object-fit: contain;}",
+        ".card__content {padding: 15px 30px 30px;}",
+        ".card__heading {font-style: normal; font-weight: 500; font-size: 18px; line-height: 24px; color: #07478a;}",
+        ".caption-with-letter-spacing {font-weight: 500; font-size: 14px; line-height: 130%; color: #b0b0b0; opacity: 1;}"
+      ],
+      "settings": {
+        "products_per_page": 8,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "bulk",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}

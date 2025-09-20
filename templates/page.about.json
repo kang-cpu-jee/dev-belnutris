@@ -1,0 +1,224 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        ".breadcrumbs {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_pcVejM": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_yV9MDc": {
+          "type": "heading",
+          "settings": {
+            "heading": "WIR SIND BELNUTRIS!",
+            "heading_size": "h1"
+          }
+        },
+        "text_aGefCb": {
+          "type": "text",
+          "settings": {
+            "text": "Gegründet von Experten und Wissenschaftlern mit langjähriger Erfahrung in den Bereichen Ernährung und ganzheitliche Gesundheit, legen wir größten Wert auf Qualität. Jedes unserer Produkte wird sorgfältig geprüft, bevor wir es unseren Kunden zur Verfügung stellen. Unsere Vision geht weit über technologische Innovation hinaus – unser wahres Engagement gilt der Unterstützung von Menschen jeden Alters, damit sie jeden Tag ein gesünderes, aktiveres und erfüllteres Leben führen können.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yV9MDc",
+        "text_aGefCb"
+      ],
+      "custom_css": [
+        ".banner__box {max-width: 630px; padding: 35px; border-radius: 4px;}",
+        "h2 {/* font-family: 'Adelle Sans'; */ font-style: normal; font-weight: 500; font-size: 52px; line-height: 56px; color: #edde9c; margin-bottom: 35px;}",
+        "p {font-family: \"Adelle Sans\"; font-style: normal; font-weight: 500; font-size: 18px; line-height: 24px; color: #ffffff;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/runner-group-friends-and-city-on-road-with-talkin-2023-11-27-05-31-46-utc.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_9JACyN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dQjaLV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Der Weg eines Produkts: Fertigungsprozess hautnah erleben",
+            "heading_size": "h1"
+          }
+        },
+        "text_VVTCy7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vom gezielt ausgewählten Rohstoff bis hin zum fertigen Endprodukt: Jeder Schritt im Produktionsprozess wird sorgfältig und präzise geplant, um erstklassige Qualität zu gewährleisten und den gesamten Fertigungsprozess transparent zu gestalten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dQjaLV",
+        "text_VVTCy7"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Adelle Sans\"; font-style: normal; font-size: 52px; line-height: 56px; color: #07478a;}",
+        "p {font-size: 18px; line-height: 24px; color: #07478a;}",
+        "@media (max-width: 480px) {.rich-text {padding-top: 0 !important; }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 20
+      }
+    },
+    "video_etPV93": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/1230.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "image_banner_YzVNqa": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_y6eGXi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fruchtbare Kollaborationen mit renommierten Universitäten",
+            "heading_size": "h0"
+          }
+        },
+        "text_VDnCGi": {
+          "type": "text",
+          "settings": {
+            "text": "Unsere Belnutris-Rezepturen basieren auf den neuesten wissenschaftlichen Erkenntnissen, die in Zusammenarbeit mit führenden europäischen Universitäten und renommierten Forschungsinstituten (Universität Wageningen, Max-Planck-Institut) entwickelt werden. Durch den kontinuierlichen Austausch mit herausragenden Wissenschaftlern stellen wir sicher, dass unsere Produkte sicher, effektiv und nachhaltig sind.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_y6eGXi",
+        "text_VDnCGi"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".banner__box {max-width: 520px; padding: 35px; border-radius: 4px;}",
+        ".banner__content {padding-bottom: 100px; padding-top: 100px;}",
+        "h2 {font-size: 52px; line-height: 56px; margin-bottom: 35px;}",
+        "p {font-size: 18px; line-height: 24px; color: #07478a;}",
+        "@media (max-width: 480px) {.banner__box {padding: 15px; } .banner__content {padding-top: 45px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/about-section-2-min.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-right",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_ADBCED": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yEW9eh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Globales Qualitätsmanagementsystem nach GMP, ISO, HACCP",
+            "heading_size": "h1"
+          }
+        },
+        "text_XCjajA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir setzen auf ein umfassendes globales Qualitätsmanagementsystem, das strengen Standards wie GMP (Good Manufacturing Practices), ISO (Internationale Organisation für Normung) und HACCP (Hazard Analysis and Critical Control Points) entspricht. Diese Richtlinien gewährleisten höchste Qualität und Sicherheit in jedem Schritt unserer Produktionsprozesse.</p><p>Durch die Implementierung dieser Standards stellen wir sicher, dass unsere Produkte nicht nur die gesetzlichen Anforderungen erfüllen, sondern auch die Erwartungen unserer Kunden übertreffen. Unser Engagement für Qualität und Sicherheit ist die Grundlage unseres Handelns und spiegelt sich in der Zufriedenheit unserer Kunden wider.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yEW9eh",
+        "text_XCjajA"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Adelle Sans\"; font-style: normal; font-size: 52px; line-height: 56px; color: #07478a;}",
+        "p {font-size: 18px; line-height: 24px; color: #07478a;}",
+        "@media (max-width: 480px) {.rich-text {padding-top: 0 !important; }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 20
+      }
+    },
+    "image_banner_yTa9Ur": {
+      "type": "image-banner",
+      "custom_css": [
+        ".banner {max-width: 790px; margin-left: auto; margin-right: auto; margin-bottom: 100px;}",
+        ".banner__media {background: transparent;}",
+        "@media (max-width: 480px) {.banner {margin-bottom: 10px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Vector-min.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_pcVejM",
+    "rich_text_9JACyN",
+    "video_etPV93",
+    "image_banner_YzVNqa",
+    "rich_text_ADBCED",
+    "image_banner_yTa9Ur"
+  ]
+}

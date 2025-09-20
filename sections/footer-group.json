@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_JTePQ9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo_9f2de420-1467-49c1-bebd-744395010de0.png",
+            "image_width": 180,
+            "alignment": ""
+          }
+        },
+        "text_kWczHL": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact Us",
+            "subtext": "<p>Dr. Frei Wellness GmbH </p><p>Henkestr. 91</p><p>91052 Erlangen</p><p>hallo@belnutris.com</p>"
+          }
+        },
+        "link_list_dEaGpa": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "image_JTePQ9",
+        "text_kWczHL",
+        "link_list_dEaGpa"
+      ],
+      "custom_css": [
+        ".newsletter-form__button {border-left: 1px solid rgba(255, 255, 255, 0.5);}",
+        ".list-social__link {padding: 5px;}",
+        ".svg-wrapper {width: 40px; height: 40px;}",
+        ".list-social__item .icon {height: 3.2rem; width: 3.2rem;}",
+        ".newsletter-form__field-wrapper .field,.field .field__input,.field:after,.field:before {border-radius: 4px; overflow: hidden;}",
+        ".footer-block__details-content.rte {padding-top: 37px;}",
+        ".footer-block__heading {}",
+        ".footer-block--newsletter {width: 40%;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-5",
+        "newsletter_enable": true,
+        "newsletter_heading": "Abonniere unseren Newsletter",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 32,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

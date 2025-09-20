@@ -1,0 +1,95 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        ".card-wrapper {border: 1px solid #fffff; border-radius: 5px;}",
+        ".card__inner {background: transparent; max-height: 413px;}",
+        ".card__media {display: flex; justify-content: center; align-items: center;}",
+        ".card__media .media,img {max-width: 105px; object-fit: contain;}",
+        ".card__content {padding: 15px 30px 30px;}",
+        ".card__heading {font-style: normal; font-weight: 500; font-size: 18px; line-height: 24px; color: #07478a;}",
+        ".caption-with-letter-spacing {font-weight: 500; font-size: 14px; line-height: 130%; color: #b0b0b0;}",
+        ".price {display: none;}"
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "bulk",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_7k3TkN": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".card-wrapper {border: 1px solid #fffff; border-radius: 5px;}",
+        ".card__inner {background: transparent; max-height: 413px;}",
+        ".card__media {display: flex; justify-content: center; align-items: center;}",
+        ".card__media .media,img {/* max-width: 105px; */ object-fit: contain;}",
+        ".card__content {padding: 15px 30px 30px;}",
+        ".card__heading {font-style: normal; font-weight: 500; font-size: 18px; line-height: 24px; color: #07478a;}",
+        ".caption-with-letter-spacing {font-weight: 500; font-size: 14px; line-height: 130%; color: #b0b0b0;}",
+        ".price {display: none;}"
+      ],
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "blutzucker-balance",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "bulk",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "featured_collection_7k3TkN"
+  ]
+}

@@ -1,0 +1,229 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_xxGUWe": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_byc3CK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/gluco001.jpg",
+            "heading": "“Vertrauensvolle Ernährung mit jeder Portion.”",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Erfahren Sie mehr",
+            "link": "shopify://products/beta-carotin",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-5",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_qNwNEe": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/boy-drinking-milk-2023-11-27-05-16-28-utc.webp",
+            "heading": "Ernährungsbasierte Lösungen, die die Gesundheit von innen heraus verbessern.",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-5",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_C7fcE6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mature-runners-running-in-a-race-2023-11-27-05-17-41-utc.jpg",
+            "heading": "\"Gegründet von erfahrenen Experten und Wissenschaftlern – für Gesundheit in jedem Alter.\"",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-5",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_byc3CK",
+        "slide_qNwNEe",
+        "slide_C7fcE6"
+      ],
+      "custom_css": [
+        ".slider-counter {display: none;}",
+        ".slider-buttons {position: absolute; right: 5%; bottom: 25px; border: 0; z-index: 2;}",
+        ".svg-wrapper {display: none;}",
+        ".slider-buttons .slider-button {background-position: center; background-repeat: no-repeat; background-color: #fff; width: 40px; height: 40px; border-radius: 50%; margin: 0 4px;}",
+        ".slideshow__text-wrapper.banner__content {padding-left: 0; padding-right: 0;}",
+        ".slider-mobile-gutter {padding: 0 !important;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "numbers",
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "custom_liquid_GYWLd9": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<div class=\"page-width-fix\">\n<div class=\"slide-scroll\">\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n  <div class=\"slide-scroll-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0880/9775/1387/files/WhatsApp_Image_2024-11-17_at_21.17.34.jpg?v=1731910382\"><span>Auch in der Apotheke erhältlich</span>\n  </div>\n</div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 56,
+        "padding_bottom": 20
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".card-wrapper {border-radius: 5px;}",
+        ".card__inner {background: transparent; max-height: 413px;}",
+        ".card__media {display: flex; justify-content: center; align-items: center;}",
+        ".card__media .media,img {object-fit: contain; position: initial; padding: 10%;}",
+        ".card__content {padding: 15px 30px 30px;}",
+        ".card__heading {font-style: normal; font-weight: 500; font-size: 18px; line-height: 24px; color: #07478a; padding-bottom: 14px;}",
+        ".price {font-weight: 500; font-size: 17px; line-height: 130%; color: #777777; opacity: 1;}"
+      ],
+      "settings": {
+        "title": "Unsere Produkte",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "blutzucker-balance",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_FP8MP9": {
+      "type": "image-banner",
+      "blocks": {
+        "text_jbUAdF": {
+          "type": "text",
+          "settings": {
+            "text": "“Belnutris bietet ernährungsbasierte Lösungen, die die Gesundheit von innen heraus verbessern.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_jbUAdF"
+      ],
+      "custom_css": [
+        ".banner__media img {object-fit: fill;}",
+        ".banner__content--bottom-center {padding-bottom: 0;}",
+        ".banner--mobile-bottom .banner__box {background: url(https://cdn.shopify.com/s/files/1/0880/9775/1387/files/Rectangle_516.png); background-size: contain; background-position: bottom center; background-repeat: no-repeat; height: 200px; display: flex; padding: 0px 8rem; align-items: flex-end; padding-bottom: 30px;}",
+        ".banner--mobile-bottom .banner__box p {font-size: 26px; line-height: 35px; color: #edde9c;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/healthy-pregnant-mother-and-little-daughter-having-2024-10-09-03-58-27-utc.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_ccYDJg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_igzYcm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Blogs",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_igzYcm"
+      ],
+      "custom_css": [
+        "@media (max-width: 480px) {.rich-text {padding-top: 50px; }}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_RCn9rF": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".blog__posts {margin-left: -25px; margin-right: -25px;}",
+        ".blog__posts .blog__post {padding-left: 25px; padding-right: 25px; padding-bottom: 52px;}",
+        ".article-card__info {font-weight: 500; font-size: 14px; line-height: 130%; color: #000000; opacity: 0.6;}",
+        ".card__heading {font-weight: 500; font-size: 28px; line-height: 36px;}",
+        ".article-card__excerpt {font-size: 18px; line-height: 24px; color: #000000; letter-spacing: 0;}",
+        ".card__information {padding: 0;}",
+        ".read-more {font-size: 18px; line-height: 24px; color: #07478a; text-decoration: none;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"page-width-desktop\">\n    <ul class=\"blog__posts grid grid--2-col-tablet grid--2-col-desktop\" role=\"list\">\n    {% for article in blogs[\"news\"].articles limit:4 %}\n    <li class=\"blog__post grid__item article\">     \n            <div class=\"article-card-wrapper\">\n                <div class=\"card article-card\">\n                    <div class=\"card__inner\" >\n                        <div class=\"article-card__image-wrapper \">\n                            <div class=\"article-card__image\">\n                                <img src=\"{{ article.image.src | img_url: '750x500' }}\" alt=\"{{ article.image.alt }}\">\n                            </div>\n                        </div>\n                        <div class=\"card__content\">\n                            <div class=\"card__information\">\n                                <div class=\"article-card__info caption-with-letter-spacing h5\">\n                                    <span class=\"circle-divider\">\n                                        {{ article.published_at | date: \" %B %d, %Y\" }}\n                                    </span>\n                                </div>\n                                <h3 class=\"card__heading h2\">\n                                    <a href=\"{{article.url}}\" class=\"full-unstyled-link\">\n                                        {{article.title}}\n                                    </a>\n                                </h3>\n                                <p class=\"article-card__excerpt rte-width\">\n                                    {{article.excerpt}}\n                                </p>\n                                <a class=\"read-more\" href=\"{{article.url}}\">Weiter lesen ></a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </li>\n\n    {% endfor %}\n    </ul>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "slideshow_xxGUWe",
+    "custom_liquid_GYWLd9",
+    "featured_collection",
+    "image_banner_FP8MP9",
+    "rich_text_ccYDJg",
+    "custom_liquid_RCn9rF"
+  ]
+}

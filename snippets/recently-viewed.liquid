@@ -1,0 +1,179 @@
+<style>
+    @media only screen and (min-width: 750px)
+{ 
+.js-recentPdpBlock{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  column-gap: var(--grid-desktop-horizontal-spacing);
+}
+}
+
+@media only screen and (max-width: 576px)
+{
+    /* Code by https://websensepro.com */
+  .js-recentPdpBlock{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--grid-desktop-horizontal-spacing);
+}
+  .c-product img{
+height: 230px !important;
+  }
+}
+
+.recently-title h2 {
+    font-size: 24px;
+    border-top: 1px solid #d2d2d2;
+    padding-top: 50px;
+}
+/* .js-recentPdpBlock {
+    display: flex;
+    flex-wrap: wrap !important;
+} */
+
+.c-product{
+  cursor: pointer;
+}
+
+.c-product img {
+    height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.c-product p.c-productPrice {
+    line-height: 0px;
+  color: #000;
+}
+
+.c-product h3.c-product__title {
+    line-height: 0px;
+    padding-bottom: 10px;
+}
+
+.c-product h3.c-product__title a {
+    color: black;
+  text-decoration: none;
+}
+ a.c-product__url{
+    position: relative;
+  }
+</style>
+<script>
+    // First Block
+        function setRecentlyViewedPdp() {
+            const pdpData = {
+                productTitle : "{{ product.title }}",
+                productImg : "{{ product.featured_image | img_url: '' }}",
+                productPrice : "{{ product.price | money | remove_first: '' }}",
+                
+                productVendor :"{{ product.collections | t }}",
+                productUrl : "{{ product.url }}"
+            };
+    
+            // Init Empty Array to push data
+            const productArr = [];
+            // Create a couple of variables 
+            let jsonResp,
+                jsonRespArr, 
+                jsonRespArrStr; 
+            // Set the number how many products you want to capture 
+            const numberOfProduct = 3;
+            // Now push the pdpData into Array so that we can use it 
+            productArr.push(pdpData);
+            // Get the product title from pdpData 
+            const currPdpTitle = pdpData.productTitle;
+            // Now Convert current page data into Strings which we already pushed in Array 
+            const pdpDataString = JSON.stringify(productArr);
+            // Set the variable for localStorage 
+            const localData = localStorage.getItem('recently_viewed');
+          
+            // Second Block
+            // first we need to check data if data is not there then store right // away 
+            if (localData == null) {
+                localStorage.setItem('recently_viewed', pdpDataString);
+                
+            }
+            // If data is there then we need to check couple of other conditions 
+            else if ( localData != null ) {
+                
+                // Create Variable for oldData or Previous page 
+                const oldPdpData = localStorage.getItem('recently_viewed');
+                // Count the amount of data stored in strings so that we can remove // old products from the stack 
+                const countPdpData = (oldPdpData.match(/productTitle/g) || []).length;
+                // we also need to check if user is not visiting page again 
+                const reVisitPdp =  oldPdpData.includes(currPdpTitle);
+                // Get old data, merged it with new data and store merged data
+                if (countPdpData < numberOfProduct && reVisitPdp == false) {
+                    jsonResp = JSON.parse(oldPdpData);
+                    jsonRespArr = jsonResp.concat(productArr);
+                    jsonRespArrStr = JSON.stringify(jsonRespArr);
+                    localStorage.setItem('recently_viewed', jsonRespArrStr);
+                }
+                // If User visited more the 4 pages delete first page data 
+                else if (countPdpData >= numberOfProduct && reVisitPdp == false) {
+                    jsonResp = JSON.parse(oldPdpData);
+                    jsonResp.shift();
+                    jsonRespArr = jsonResp.concat(productArr);
+                    jsonRespArr =  JSON.stringify(jsonRespArr);
+                    localStorage.setItem('recently_viewed', jsonRespArr);
+                }
+            }
+        }
+        
+        // Now we write all our function and it's time to execute it 
+        setRecentlyViewedPdp();
+        // Set Variable for Local Storage Data 
+        const localViewed = localStorage.recently_viewed;
+        // console.log to verify the data 
+    </script>
+             <div class="recently-title">
+                      <h2 class="title inline-richtext h2 scroll-trigger animate--slide-in"><b>Kürzlich angesehene Produkte</b></h2>
+                    </div>
+    <div class="js-recentPdpBlock">
+    </div>
+    <script>
+        // Third Block
+        function getRecentPdp (){
+    
+            // First let's convert localStorage data into object again
+            const pdpData = JSON.parse(localStorage.getItem('recently_viewed'));
+            console.log(pdpData)
+            // Create a empty Array
+            const recentViewHtml = []
+            // Loop through all the data and inject into HTML using ES6
+            pdpData.forEach(function(item){ 
+                recentViewHtml.push(`
+                    <div class="card-wrapper product-card-wrapper underline-links-hover">
+                    <div class="c-product">
+                        <div class="c-product__img card__inner color-scheme-2 gradient ratio">
+                        <a href="${item.productUrl}"><img src='${item.productImg}'/></a>
+                        </div>
+                        <div class="card__content">
+                          <h3 class="card__heading h5">
+                              <a class="c-product__url full-unstyled-link" href="${item.productUrl}">
+                              ${item.productTitle}
+                              </a>
+                          </h3>
+                          <div class="c-card-information">${item.productPrice}</div>
+                        </div>
+                    </div>
+                    </div>
+                `)
+            })
+            // Now consolidate the data 
+            const recentBlock = `${recentViewHtml.join('')}`
+            // console.log() to check data is correct 
+            console.log(recentBlock);
+            // Inject into PDP page
+            const contentBlock = document.querySelectorAll('.js-recentPdpBlock');
+            // Push the data
+            contentBlock.forEach(element =>{
+                element.innerHTML = recentBlock;
+            })
+           
+        }
+        // Execute this function on DOM content load 
+    
+        getRecentPdp();
+        </script>

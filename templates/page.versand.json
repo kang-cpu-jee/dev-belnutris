@@ -1,0 +1,171 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        ".breadcrumbs {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_HE8rTY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JzktgA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zahlung & Versand",
+            "heading_size": "h1"
+          }
+        },
+        "text_MjUDq8": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>1) ZAHLUNG</h4><p>Wir bieten Dir folgende Zahlungsmöglichkeiten an:<br/></p><ul><li>Zahlung per PayPal</li><li>Zahlung per Kreditkarte<br/>Visa, Mastercard, Maestro & American Express</li><li>Shopify Shop Pay</li><li>Apple Pay</li><li>Google Pay </li><li>Sofort (Klarna)</li></ul><p></p><h4>2) VERSAND</h4><p>Wir versenden klimaneutral mit DPD oder DHL (Standardversand).</p><p>Im Folgenden findest Du Informationen zu unseren Versandkosten (inkl. gesetzlicher Mehrwertsteuer) und Lieferzeit. Die Versandkosten werden ebenfalls während des Bestellvorgangs angezeigt.<br/></p><p><strong>Deutschland<br/></strong>3,80 € <br/>Versandkostenfrei ab 80 €<br/>Lieferzeit 2 - 3 Werktage</p><p><strong>Europäische Union <br/></strong>13,00 €<br/>Versandkostenfrei ab 180 €  <br/>Lieferzeit 3 - 6 Werktage</p><p><strong>Europa (Non-EU)<br/></strong>18,50 €<br/>Versandkostenfrei ab 220 €<br/>Lieferzeit 6 - 9 Werktage<br/><br/><strong>Restliche Welt<br/></strong>30 €<br/>versandkostenfrei ab 270 €<br/><br/>Bitte beachte:<br/>Im Falle einer Rücksendung aufgrund einer unvollständigen Adresse oder einer abgelaufenen Lagerfrist in einer Packstation erstatten wir den Kaufbetrag abzüglich der Versandkosten für Hin- und Rücksendung, sobald die Bestellung bei uns eingegangen ist.</p><p>Hast Du Artikel mit unterschiedlichen Lieferzeiten bestellt, versenden wir die Ware in einer gemeinsamen Sendung, sofern wir keine abweichenden Vereinbarungen mit Dir getroffen haben. Die Lieferzeit bestimmt sich in diesem Fall nach dem Artikel mit der längsten Lieferzeit, den Du bestellt hast.</p><p>Alle internationalen Empfänger mit einer Lieferadresse außerhalb der EU gelten als Importeur und können somit Einfuhrabgaben (Zoll, Einfuhrsteuer, Abfertigungsgebühren) unterliegen, die im Bestimmungsland erhoben werden. Wir <strong>haben keinen Einfluss auf Importabgaben und Importbeschränkungen im Bestimmungsland und können die Kosten und den Aufwand nicht vorhersagen</strong>. Die Zollrichtlinien sind von Land zu Land sehr unterschiedlich. Für weitere Informationen wende Dich bitte an Deine lokale Zollbehörde. Bitte beachte ebenfalls, dass beim Versand ins nicht EU-Ausland Zollabfertigungsverfahren die Zustellung der Pakete um bis zu 4 Wochen verzögern können.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JzktgA",
+        "text_MjUDq8"
+      ],
+      "custom_css": [
+        ".rich-text__heading {text-align: center; padding-bottom: 60px;}",
+        ".breadcrumbs {display: none;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "collapsible_content_xrTze3": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_RjdUyB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who is collecting your data",
+            "icon": "none",
+            "row_content": "<p>At Belnutris, we understand your concern for your personal data and its responsible use. We want to assure you that Belnutris handles your personal information with utmost care. This Privacy Notice is designed to provide clarity on what personal data we collect, why we collect it, and how we use it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_D3eyyj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What personal data is being collected?",
+            "icon": "none",
+            "row_content": "<p>Please note that this Notice applies to all Belnutris entities. We encourage you to take a moment to review our privacy practices. If you have any questions, please feel free to reach out to us via email or by using the “Contact Us” form on our websites.<br/>We strive to make this Notice easy to understand. If you encounter unfamiliar terms like cookies, IP addresses, or browsers, we recommend familiarizing yourself with these concepts beforehand.<br/>You have the right to object to certain uses of your personal data, including direct marketing. Learn more about your rights and how to exercise them here.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_KE67bK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How we collect your personal data?",
+            "icon": "none",
+            "row_content": "<p>At Belnutris, we understand your concern for your personal data and its responsible use. We want to assure you that Belnutris handles your personal information with utmost care. This Privacy Notice is designed to provide clarity on what personal data we collect, why we collect it, and how we use it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dQzDqX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How we store and use your personal data?",
+            "icon": "none",
+            "row_content": "<p>At Belnutris, we understand your concern for your personal data and its responsible use. We want to assure you that Belnutris handles your personal information with utmost care. This Privacy Notice is designed to provide clarity on what personal data we collect, why we collect it, and how we use it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bh8LP7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do we store your personal data?",
+            "icon": "none",
+            "row_content": "<p>At Belnutris, we understand your concern for your personal data and its responsible use. We want to assure you that Belnutris handles your personal information with utmost care. This Privacy Notice is designed to provide clarity on what personal data we collect, why we collect it, and how we use it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GCiBNq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your rights?",
+            "icon": "none",
+            "row_content": "<p>At Belnutris, we understand your concern for your personal data and its responsible use. We want to assure you that Belnutris handles your personal information with utmost care. This Privacy Notice is designed to provide clarity on what personal data we collect, why we collect it, and how we use it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mxfFAB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How to contact us?",
+            "icon": "none",
+            "row_content": "<p>At Belnutris, we understand your concern for your personal data and its responsible use. We want to assure you that Belnutris handles your personal information with utmost care. This Privacy Notice is designed to provide clarity on what personal data we collect, why we collect it, and how we use it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nYzmBQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Changes to this policy",
+            "icon": "none",
+            "row_content": "<p>At Belnutris, we understand your concern for your personal data and its responsible use. We want to assure you that Belnutris handles your personal information with utmost care. This Privacy Notice is designed to provide clarity on what personal data we collect, why we collect it, and how we use it.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_RjdUyB",
+        "collapsible_row_D3eyyj",
+        "collapsible_row_KE67bK",
+        "collapsible_row_dQzDqX",
+        "collapsible_row_bh8LP7",
+        "collapsible_row_GCiBNq",
+        "collapsible_row_mxfFAB",
+        "collapsible_row_nYzmBQ"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".collapsible-content-wrapper-narrow {display: flex; max-width: 1280px; gap: 40px;}",
+        ".collapsible-content__header {max-width: 620px; width: 100%;}",
+        ".collapsible-content__grid {max-width: 620px; width: 100%;}",
+        ".collapsible-content__heading {font-style: normal; font-weight: 500; font-size: 46px; line-height: 50px; max-width: 460px;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "This Privacy Statement was last updated on July 2024.",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "small",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_HE8rTY",
+    "collapsible_content_xrTze3"
+  ]
+}

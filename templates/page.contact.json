@@ -1,0 +1,85 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_WgjAyn": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_p434wq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us!",
+            "heading_size": "h1"
+          }
+        },
+        "text_T9bXKy": {
+          "type": "text",
+          "settings": {
+            "text": "Hast du Fragen zu unseren Produkten? Bitte fülle das Formular aus und wir melden uns bald bei dir!",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p434wq",
+        "text_T9bXKy"
+      ],
+      "custom_css": [
+        ".banner--mobile-bottom .banner__box {padding: 0; background: transparent; max-width: 700px;}",
+        "@media (max-width: 480px) {.banner--mobile-bottom .banner__box {padding: 0 15px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Hero-Banner.gif",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "custom_css": [
+        ".contact .field {margin-bottom: 10px;}",
+        ".contact .field:before,.field:after {border-radius: 4px;}",
+        ".contact .field input {border-width: 1px; border-radius: 4px;}",
+        ".contact__fields {grid-column-gap: 10px;}",
+        ".contact__button {margin-top: 10px;}",
+        ".contact__button button {width: 100%; border-radius: 4px; overflow: hidden;}",
+        ".contact {padding: 5rem; max-width: 1300px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_WgjAyn",
+    "form"
+  ]
+}
