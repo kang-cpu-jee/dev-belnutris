@@ -93,6 +93,8 @@
     "article": {
       "blog": "Blog",
       "read_more_title": "Read more",
+      "view_all": "View all",
+      "no_blog_selected": "Please select a blog to display articles",
       "comments": {
         "one": "{{ count }} comment",
         "other": "{{ count }} comments"

@@ -105,11 +105,6 @@
                     </h2>
                   </a>
                 </div>
-                {% comment %}
-                  {% if product.metafields.descriptors.subtitle %}
-                     <p class="volumen">{{ product.metafields.descriptors.subtitle }}</p>
-                  {% endif %}
-                {% endcomment %}
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -445,6 +440,109 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
+              {%- when 'shipping_info' -%}
+                <div class="product-shipping-info" {{ block.shopify_attributes }}>
+                  <div class="shipping-info-wrapper">
+                    {%- if block.settings.shipping_image != blank -%}
+                      <span class="shipping-info-icon">
+                        <img
+                          src="{{ block.settings.shipping_image | image_url: width: 24 }}"
+                          alt="{{ block.settings.shipping_text | escape }}"
+                          width="24"
+                          height="24"
+                          loading="lazy"
+                        >
+                      </span>
+                    {%- elsif block.settings.shipping_icon != 'none' -%}
+                      <span class="shipping-info-icon">
+                        {%- render 'icon-accordion', icon: block.settings.shipping_icon -%}
+                      </span>
+                    {%- endif -%}
+                    <span class="shipping-info-text">
+                      {{- block.settings.shipping_text | replace: '2 sản phẩm', '<strong>2 sản phẩm</strong>' -}}
+                    </span>
+                  </div>
+                </div>
+              {%- when 'stock_info' -%}
+                <div class="product-stock-info" {{ block.shopify_attributes }}>
+                  <div class="stock-info-wrapper">
+                    {%- if block.settings.stock_image != blank -%}
+                      <span class="stock-info-icon">
+                        <img
+                          src="{{ block.settings.stock_image | image_url: width: 24 }}"
+                          alt="{{ block.settings.stock_text | escape }}"
+                          width="24"
+                          height="24"
+                          loading="lazy"
+                        >
+                      </span>
+                    {%- elsif block.settings.stock_icon != 'none' -%}
+                      <span class="stock-info-icon">
+                        {%- render 'icon-accordion', icon: block.settings.stock_icon -%}
+                      </span>
+                    {%- endif -%}
+                    <span class="stock-info-text">
+                      {{- block.settings.stock_text | replace: 'Auf Lager', '<strong>Auf Lager</strong>' -}}
+                    </span>
+                  </div>
+                </div>
+              {%- when 'article_list' -%}
+                <div class="product-article-list" {{ block.shopify_attributes }}>
+                  {%- if block.settings.heading != blank -%}
+                    <h3 class="article-list-heading">{{ block.settings.heading }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.blog != blank -%}
+                    <div class="article-list-wrapper">
+                      {%- assign article_limit = block.settings.article_count | default: 3 -%}
+                      {%- assign selected_blog = blogs[block.settings.blog] -%}
+                      {%- if selected_blog and selected_blog.articles.size > 0 -%}
+                        {%- for article in selected_blog.articles limit: article_limit -%}
+                          <div class="article-item">
+                            <a href="{{ article.url }}" class="article-link">
+                              {%- if article.image and block.settings.show_image -%}
+                                <div class="article-image">
+                                  <img
+                                    src="{{ article.image | image_url: width: 400 }}"
+                                    alt="{{ article.title | escape }}"
+                                    width="400"
+                                    height="200"
+                                    loading="lazy"
+                                  >
+                                </div>
+                              {%- endif -%}
+                              <div class="article-content">
+                                <h4 class="article-title">{{ article.title | truncate: 60 }}</h4>
+                                {%- if block.settings.show_excerpt -%}
+                                  <p class="article-excerpt">{{ article.excerpt | truncate: 120 }}</p>
+                                {%- else -%}
+                                  <p class="article-excerpt">
+                                    {{ article.summary | default: article.content | strip_html | truncate: 120 }}
+                                  </p>
+                                {%- endif -%}
+                              </div>
+                            </a>
+                          </div>
+                        {%- endfor -%}
+                        {%- if selected_blog.articles.size > article_limit -%}
+                          <a href="{{ selected_blog.url }}" class="view-all-link">
+                            {{ 'blogs.article.view_all' | t }}
+                          </a>
+                        {%- endif -%}
+                      {%- else -%}
+                        <p class="article-list-debug">
+                          Debug: Selected blog = "{{ block.settings.blog }}"
+                          {%- if selected_blog != blank -%}
+                            | Blog found with {{ selected_blog.articles.size | default: 0 }} articles
+                          {%- else -%}
+                            | Blog not found
+                          {%- endif -%}
+                        </p>
+                      {%- endif -%}
+                    </div>
+                  {%- else -%}
+                    <p class="article-list-empty">{{ 'blogs.article.no_blog_selected' | t }}</p>
+                  {%- endif -%}
+                </div>
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -476,6 +574,9 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+                {% if product.metafields.descriptors.subtitle %}
+                  <p class="volumen">{{ product.metafields.descriptors.subtitle }}</p>
+                {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -854,6 +955,137 @@
       "type": "quantity_selector",
       "name": "t:sections.main-product.blocks.quantity_selector.name",
       "limit": 1
+    },
+    {
+      "type": "shipping_info",
+      "name": "Shipping Information",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "shipping_text",
+          "label": "Shipping Text",
+          "default": "Bạn được miễn phí vận chuyển khi mua từ 2 sản phẩm"
+        },
+        {
+          "type": "select",
+          "id": "shipping_icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+            }
+          ],
+          "default": "truck",
+          "label": "Shipping Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "shipping_image",
+          "label": "Shipping Image (Alternative to Icon)"
+        }
+      ]
+    },
+    {
+      "type": "stock_info",
+      "name": "Stock Information",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "stock_text",
+          "label": "Stock Text",
+          "default": "Auf Lager - in 2-3 Tagen bei Dir"
+        },
+        {
+          "type": "select",
+          "id": "stock_icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+            },
+            {
+              "value": "eye",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+            },
+            {
+              "value": "clock",
+              "label": "Clock"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+            }
+          ],
+          "default": "check_mark",
+          "label": "Stock Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "stock_image",
+          "label": "Stock Image (Alternative to Icon)"
+        }
+      ]
+    },
+    {
+      "type": "article_list",
+      "name": "Article List",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Related Articles"
+        },
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Blog"
+        },
+        {
+          "type": "range",
+          "id": "article_count",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "label": "Number of articles to show",
+          "default": 3
+        },
+        {
+          "type": "checkbox",
+          "id": "show_image",
+          "label": "Show article images",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_excerpt",
+          "label": "Show article description",
+          "default": true
+        }
+      ]
     },
     {
       "type": "variant_picker",

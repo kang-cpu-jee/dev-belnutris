@@ -93,6 +93,8 @@
     "article": {
       "blog": "Blog",
       "read_more_title": "Đọc thêm: {{ title }}",
+      "view_all": "Xem tất cả",
+      "no_blog_selected": "Vui lòng chọn blog để hiển thị bài viết",
       "comments": {
         "one": "{{ count }} bình luận",
         "other": "{{ count }} bình luận"
