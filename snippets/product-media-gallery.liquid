@@ -42,12 +42,32 @@
   endif
 -%}
 
+{%- if section.settings.gallery_layout == 'vertical_stack' -%}
+  <!-- Vertical Stack Layout -->
+  <div class="vertical-stack-gallery">
+    <div class="vertical-stack-container">
+      {%- for media in product.media -%}
+        <div class="vertical-stack-item" data-media-id="{{ media.id }}">
+          {%- if media.media_type == 'image' -%}
+            <img src="{{ media | image_url: width: 800 }}" 
+                 alt="{{ media.alt | escape }}" 
+                 width="800" height="800"
+                 class="vertical-stack-image"
+                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+          {%- elsif media.media_type == 'video' -%}
+            <div class="vertical-stack-video-wrapper">
+              {{ media | media_tag: controls: true, class: 'vertical-stack-video' }}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- else -%}
+
 <media-gallery
   id="MediaGallery-{{ section.id }}"
   role="region"
-  {% if section.settings.enable_sticky_info %}
-    class="product__column-sticky"
-  {% endif %}
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
@@ -330,3 +350,5 @@
     </slider-component>
   {%- endif -%}
 </media-gallery>
+
+{%- endif -%}

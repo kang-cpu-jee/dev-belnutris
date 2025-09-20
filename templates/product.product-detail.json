@@ -55,6 +55,21 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "shipping_info_ibdwDQ": {
+          "type": "shipping_info",
+          "settings": {
+            "shipping_text": "Bạn được miễn phí vận chuyển khi mua từ 2 sản phẩm",
+            "shipping_icon": "none"
+          }
+        },
+        "stock_info_CeggHx": {
+          "type": "stock_info",
+          "settings": {
+            "stock_text": "Auf Lager - in 2-3 Tagen bei Dir",
+            "stock_icon": "check_mark",
+            "stock_image": "shopify://shop_images/Group_229.png"
+          }
+        },
         "description_Ryt8D3": {
           "type": "description",
           "disabled": true,
@@ -69,6 +84,7 @@
         },
         "custom_liquid_C8n6ch": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"decription\" >{{ product.metafields.custom.short_decription }}</div>\n<style>\n.decription{\nopacity:1;\n    color: #07478a;\n}\n</style>"
           }
@@ -85,7 +101,8 @@
             "heading_2": "Mit hochwertigen Proteinen, die zum Erhalt & Aufbau von Muskelmasse beitragen",
             "icon_3": "none",
             "image_3": "shopify://shop_images/Group_13717.png",
-            "heading_3": "Reich an Calcium & Vitamin D für Knochen & Bewegungsapparat"
+            "heading_3": "Reich an Calcium & Vitamin D für Knochen & Bewegungsapparat",
+            "custom_class": ""
           }
         },
         "icon_with_text_RBmJtQ": {
@@ -100,10 +117,21 @@
             "heading_2": "Essentielle Vitamine & Mineralstoffe",
             "icon_3": "truck",
             "image_3": "shopify://shop_images/Group_13716.png",
-            "heading_3": "Ideal für einen aktiven Lebensstil & tägliche Rundum-Versorgung"
+            "heading_3": "Ideal für einen aktiven Lebensstil & tägliche Rundum-Versorgung",
+            "custom_class": ""
           }
         },
-        "collapsible_tab_AddRK8": {
+        "article_list_3U7Lm6": {
+          "type": "article_list",
+          "settings": {
+            "heading": "Ideal für einen aktiven Lebensstil",
+            "blog": "news",
+            "article_count": 5,
+            "show_image": true,
+            "show_excerpt": true
+          }
+        },
+        "collapsible_tab_NFtaet": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Inhaltsstoffe",
@@ -138,12 +166,15 @@
         "rating_Tr3XpX",
         "price_zVY7CV",
         "quantity_selector",
+        "shipping_info_ibdwDQ",
+        "stock_info_CeggHx",
         "description_Ryt8D3",
         "buy_buttons_MK44it",
         "custom_liquid_C8n6ch",
         "icon_with_text_HRWUcf",
         "icon_with_text_RBmJtQ",
-        "collapsible_tab_AddRK8",
+        "article_list_3U7Lm6",
+        "collapsible_tab_NFtaet",
         "collapsible_tab_r7aXXN",
         "collapsible_tab_DMXfh6"
       ],
@@ -159,12 +190,13 @@
         ".product__title h1 {font-size: 46px; line-height: 50px;}"
       ],
       "settings": {
+        "collapsible_tabs_title": "PRODUKTDETAILS",
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "small",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
+        "gallery_layout": "vertical_stack",
         "media_position": "left",
         "image_zoom": "none",
         "mobile_thumbnails": "show",
@@ -172,6 +204,19 @@
         "enable_video_looping": false,
         "padding_top": 52,
         "padding_bottom": 52
+      }
+    },
+    "custom_liquid_879bD3": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".product-icon {width: 60px; height: auto; max-width: 100%; padding-bottom: 20px;}"
+      ],
+      "name": "Pure Integrity Label",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_5 %}\n<div class=\"container-page-style-two\">\n    <h2>{{ product.metafields.custom.product_layout_content_title_5 | metafield_tag }}</h2>\n    <div class=\"container-wrap\">\n        {% assign icons = product.metafields.custom.product_layout_content_item_icon_51.value %}\n        {% assign titles = product.metafields.custom.product_layout_content_item_title_51.value %}\n        {% assign texts = product.metafields.custom.product_layout_content_item_text_51.value %}\n\n        {% if icons and titles and texts %}\n        <div class=\"product-content-list\">\n            {% for icon in icons %}\n                {% assign index = forloop.index0 %}\n                {% assign title = titles[index] %}\n                {% assign text = texts[index] %}\n\n                <div class=\"product-content-item\">\n                    <img src=\"https://belnutris.com/cdn/shop/{{ icon }}\" alt=\"{{ title }}\" class=\"product-icon\">\n                    <h4 class=\"product-title\">{{ title }}</h4>\n                    <p class=\"product-text\">{{ text }}</p>\n                </div>\n            {% endfor %}\n        </div>\n        {% endif %}\n    </div>\n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_Fq83mt": {
@@ -186,9 +231,11 @@
     },
     "custom_liquid_TmtJ7X": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         ".w-980 {max-width: 1400px;}"
       ],
+      "name": "content + image",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.product_layout_content_1 %}\n<div class=\"container-page\">\n<div class=\"text\">\n{{ product.metafields.custom.product_layout_content_1 | metafield_tag }}\n</div>\n<div class=\"image\">\n{{ product.metafields.custom.product_layout_image_1 | metafield_tag }}\n</div>  \n</div>\n{% endif %}",
         "color_scheme": "",
@@ -198,6 +245,8 @@
     },
     "custom_liquid_J9pBgn": {
       "type": "custom-liquid",
+      "disabled": true,
+      "name": "image + content",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.product_layout_content_2 %}\n<div class=\"container-page container-page-two\">\n<div class=\"image\">\n{{ product.metafields.custom.product_layout_image_2 | metafield_tag }}\n</div>  \n<div class=\"text\">\n{{ product.metafields.custom.product_layout_content_2 | metafield_tag }}\n</div>\n</div>\n{% endif %}",
         "color_scheme": "",
@@ -207,6 +256,8 @@
     },
     "custom_liquid_6iP44m": {
       "type": "custom-liquid",
+      "disabled": true,
+      "name": "content + image + content",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_3 %}\n<div class=\"container-page-style-one\">\n                <h2>{{ product.metafields.custom.product_layout_content_title_3 | metafield_tag }}</h2>\n                <div class=\"container-page\">\n                    <div class=\"text\">\n                        {{ product.metafields.custom.product_layout_content_left_3 | metafield_tag }}\n                    </div>\n                    <div class=\"image\">\n                        {{ product.metafields.custom.product_layout_content_image_3 | metafield_tag }}\n                    </div>\n                    <div class=\"text\">\n                        {{ product.metafields.custom.product_layout_content_right_3 | metafield_tag }}\n                    </div>\n                </div>\n            </div>\n{% endif %}",
         "color_scheme": "",
@@ -216,6 +267,8 @@
     },
     "custom_liquid_XgzNRw": {
       "type": "custom-liquid",
+      "disabled": true,
+      "name": "image + text 4",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.product_layout_title_4 %}\n<div class=\"container-page\">\n<div class=\"image\">\n{{ product.metafields.custom.product_layout_image_4 | metafield_tag }}\n</div>  \n<div class=\"text\">\n<h2>{{ product.metafields.custom.product_layout_title_4 | metafield_tag }}</h2>\n<div class=\"accordion-container\">\n    {% assign titles = product.metafields.custom.product_layout_title_accordion_4.value %}\n    {% assign contents = product.metafields.custom.product_layout_content_accordion_4.value %}\n\n    {% if titles and contents %}\n        {% for title in titles %}\n            {% assign index = forloop.index0 %}\n            {% assign content = contents[index] %}\n\n            <button class=\"collapsible\">{{ title }}</button>\n            <div class=\"content\" style=\"text-align: left;\"><p>{{ content }}</p></div>\n        {% endfor %}\n    {% endif %}\n</div>\n</div>\n</div>\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function () {\nconst collapsibles = document.querySelectorAll(\".collapsible\");\n\ncollapsibles.forEach((button) => {\nbutton.addEventListener(\"click\", () => {\n// Toggle active class\nbutton.classList.toggle(\"active\");\n\n// Get the associated content div\nconst content = button.nextElementSibling;\n  if (content.style.maxHeight) {\n    // Close the content\n    content.style.maxHeight = null;\n    content.classList.remove(\"open\");\n} else {\n    // Open the content\n    content.style.maxHeight = content.scrollHeight + \"px\";\n    content.classList.add(\"open\");\n}\n\n  });\n\n});\n\n});\n\n</script>\n{% endif %}",
         "color_scheme": "",
@@ -223,20 +276,10 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_879bD3": {
-      "type": "custom-liquid",
-      "custom_css": [
-        ".product-icon {width: 60px; height: auto; max-width: 100%; padding-bottom: 20px;}"
-      ],
-      "settings": {
-        "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_5 %}\n<div class=\"container-page-style-two\">\n    <h2>{{ product.metafields.custom.product_layout_content_title_5 | metafield_tag }}</h2>\n    <div class=\"container-wrap\">\n        {% assign icons = product.metafields.custom.product_layout_content_item_icon_51.value %}\n        {% assign titles = product.metafields.custom.product_layout_content_item_title_51.value %}\n        {% assign texts = product.metafields.custom.product_layout_content_item_text_51.value %}\n\n        {% if icons and titles and texts %}\n        <div class=\"product-content-list\">\n            {% for icon in icons %}\n                {% assign index = forloop.index0 %}\n                {% assign title = titles[index] %}\n                {% assign text = texts[index] %}\n\n                <div class=\"product-content-item\">\n                    <img src=\"https://belnutris.com/cdn/shop/{{ icon }}\" alt=\"{{ title }}\" class=\"product-icon\">\n                    <h4 class=\"product-title\">{{ title }}</h4>\n                    <p class=\"product-text\">{{ text }}</p>\n                </div>\n            {% endfor %}\n        </div>\n        {% endif %}\n    </div>\n</div>\n{% endif %}",
-        "color_scheme": "",
-        "padding_top": 48,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_eUkjqw": {
       "type": "custom-liquid",
+      "disabled": true,
+      "name": "Tab table 6",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.product_layout_product_table_6 %}\n<div class=\"container-page\">\n<div class=\"container-page\">\n{{ product.metafields.custom.product_layout_product_table_6 | metafield_tag }}\n</div>\n</div>\n{% endif %}",
         "color_scheme": "",
@@ -246,6 +289,7 @@
     },
     "custom_liquid_h6Pn6Y": {
       "type": "custom-liquid",
+      "name": "Produktdetails",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.product_layout_product_detail.value %}\n<div class=\"container-page-product-detail\">\n    <h2>Produktdetails:</h2>\n    <div class=\"container-wrap\">\n        {% assign details = product.metafields.custom.product_layout_product_detail.value %}\n\n        {% if details %}\n        <div class=\"detail-list\">\n            {% for item in details %}\n                <p>{{ item }}</p>\n            {% endfor %}\n        </div>\n        {% endif %}\n    </div>\n</div>\n{% endif %}",
         "color_scheme": "",
@@ -255,6 +299,8 @@
     },
     "custom_liquid_kNLPyd": {
       "type": "custom-liquid",
+      "disabled": true,
+      "name": "content in Bg",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_8 %}\n<div class=\"container-page\">\n                <div class=\"container-page-box\">\n                    {{ product.metafields.custom.product_layout_content_image_8 | metafield_tag }}\n                    <div class=\"container-page-box-item\">\n                        <h2>{{ product.metafields.custom.product_layout_content_title_8 | metafield_tag }}</h2>\n                        {{ product.metafields.custom.product_layout_content_text_8 | metafield_tag }}\n                    </div>\n                </div>\n            </div>\n{% endif %}",
         "color_scheme": "",
@@ -276,10 +322,10 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "SẢN PHẨM BẠN CÓ THỂ THÍCH",
         "heading_size": "h2",
-        "products_to_show": 3,
-        "columns_desktop": 3,
+        "products_to_show": 4,
+        "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
@@ -481,12 +527,12 @@
   "order": [
     "volume_discount_banner_dyz39D",
     "main",
+    "custom_liquid_879bD3",
     "custom_liquid_Fq83mt",
     "custom_liquid_TmtJ7X",
     "custom_liquid_J9pBgn",
     "custom_liquid_6iP44m",
     "custom_liquid_XgzNRw",
-    "custom_liquid_879bD3",
     "custom_liquid_eUkjqw",
     "custom_liquid_h6Pn6Y",
     "custom_liquid_kNLPyd",

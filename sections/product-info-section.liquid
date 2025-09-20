@@ -1,0 +1,198 @@
+{{ 'component-product-info-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="product-info-section color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- comment -%} Get metafields data {%- endcomment -%}
+    {%- assign section_title = product.metafields.custom.title_product_faq.value -%}
+    {%- assign section_image = product.metafields.custom.image_product_faq.value -%}
+    {%- assign faq_questions = product.metafields.custom.faqs_questions.value -%}
+    {%- assign faq_answers = product.metafields.custom.faqs_answers.value -%}
+
+    {%- comment -%} Display title if exists {%- endcomment -%}
+    {%- if section_title != blank -%}
+      <div class="product-info-section__title-wrapper">
+        <h2 class="product-info-section__title {{ section.settings.heading_size }}">
+          {{ section_title }}
+        </h2>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Main content layout {%- endcomment -%}
+    {%- if section_image != blank or faq_questions.size > 0 -%}
+      <div class="product-info-section__content">
+        {%- comment -%} Left side - Image (50%) {%- endcomment -%}
+        {%- if section_image != blank -%}
+          <div class="product-info-section__image-wrapper">
+            <div class="product-info-section__image media">
+              {{
+                section_image
+                | image_url: width: 800
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'product-info-section__image-img',
+                  widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+                  alt: section_image.alt
+                | escape
+              }}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- comment -%} Right side - FAQs (50%) {%- endcomment -%}
+        {%- if faq_questions.size > 0 -%}
+          <div class="product-info-section__faq-wrapper">
+            <div class="product-info-section__faqs">
+              {%- for question in faq_questions -%}
+                {%- assign answer = faq_answers[forloop.index0] -%}
+                {%- if question != blank and answer != blank -%}
+                  <details
+                    class="product-info-section__faq-item accordion"
+                    id="Details-{{ forloop.index }}-{{ section.id }}"
+                  >
+                    <summary class="product-info-section__faq-question">
+                      <div class="summary__title">
+                        <h3 class="product-info-section__faq-question-text h5 accordion__title">
+                          {{ question }}
+                        </h3>
+                      </div>
+                      <div class="summary__icon">+</div>
+                    </summary>
+                    <div
+                      class="product-info-section__faq-answer accordion__content rte"
+                      id="ProductFAQ-{{ forloop.index }}-{{ section.id }}"
+                    >
+                      <div class="accordion__content-inner">
+                        {{ answer | newline_to_br }}
+                      </div>
+                    </div>
+                  </details>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Fallback message if no metafields data {%- endcomment -%}
+    {%- unless section_title != blank or section_image != blank or faq_questions.size > 0 -%}
+      {%- if request.design_mode -%}
+        <div class="product-info-section__placeholder">
+          <p>Để hiển thị nội dung, vui lòng thêm các metafields sau vào sản phẩm:</p>
+          <ul>
+            <li><strong>title_product_faq</strong> - Tiêu đề section</li>
+            <li><strong>image_product_faq</strong> - Hình ảnh</li>
+            <li><strong>faqs_questions</strong> - Danh sách câu hỏi</li>
+            <li><strong>faqs_answers</strong> - Danh sách câu trả lời</li>
+          </ul>
+        </div>
+      {%- endif -%}
+    {%- endunless -%}
+  </div>
+</div>
+
+<script src="{{ 'product-info-section.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Product Info Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        },
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Title size"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Info Section"
+    }
+  ]
+}
+{% endschema %}

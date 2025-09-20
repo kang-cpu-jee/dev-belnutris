@@ -1769,3 +1769,400 @@ a.product__text {
     font-size: 1.3rem;
   }
 }
+
+/* Product Collapsible Tabs - Below Product Images */
+.product__media-wrapper {
+  position: static !important; /* Override any sticky positioning */
+}
+
+.product__media-collapsible {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.1);
+  padding-top: 1.5rem;
+}
+
+.collapsible-tabs-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1e3a8a;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product__media-collapsible .product__accordion {
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 0;
+  background: transparent;
+}
+
+.product__media-collapsible .product__accordion:last-child {
+  border-bottom: none;
+}
+
+/* Accordion Summary Styling */
+.product__media-collapsible .product__accordion summary {
+  background: #1e3a8a;
+  color: white;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  list-style: none;
+}
+
+.product__media-collapsible .product__accordion summary:hover {
+  background: #1e40af;
+}
+
+.product__media-collapsible .product__accordion[open] summary {
+  background: #1e40af;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hide default arrow */
+.product__media-collapsible .product__accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.product__media-collapsible .product__accordion summary::marker {
+  content: '';
+}
+
+/* Custom arrow positioning */
+.product__media-collapsible .product__accordion summary .summary__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  margin: 0;
+}
+
+.product__media-collapsible .product__accordion summary .summary__title .accordion__title {
+  color: white;
+  margin: 0;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* Arrow icon styling */
+.product__media-collapsible .product__accordion summary svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+}
+
+.product__media-collapsible .product__accordion[open] summary svg {
+  transform: rotate(180deg);
+}
+
+/* Content styling */
+.product__media-collapsible .accordion__content {
+  background: white;
+  padding: 1.5rem;
+  margin: 0;
+  border-left: 3px solid #1e3a8a;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Icon styling if exists */
+.product__media-collapsible .summary__title .icon-accordion {
+  display: none; /* Hide accordion icons to match the design */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 749px) {
+  .collapsible-tabs-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product__media-collapsible .product__accordion summary {
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .product__media-collapsible .accordion__content {
+    padding: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .product__media-collapsible {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+/* Custom Product Slider */
+.custom-product-slider {
+  margin: 2rem 0;
+}
+
+.custom-slider-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: rgb(var(--color-foreground));
+}
+
+.custom-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-image-container {
+  display: flex;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.main-product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.related-images-slider {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+.related-images-track {
+  display: flex;
+  gap: 1rem;
+  min-width: max-content;
+  padding: 0 1rem;
+}
+
+.related-image-item {
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.related-image-item:hover,
+.related-image-item.active {
+  border-color: rgb(var(--color-foreground));
+}
+
+.related-image-item img {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.related-image-item:hover img {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 750px) {
+  .custom-slider-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .main-image-container {
+    flex: 1;
+    max-width: 70%;
+  }
+  
+  .related-images-slider {
+    flex: 0 0 25%;
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  
+  .related-images-track {
+    flex-direction: column;
+    min-width: auto;
+  }
+}
+
+/* Vertical Stack Gallery Layout */
+.product--vertical_stack media-gallery {
+  display: none !important;
+}
+
+.vertical-stack-gallery {
+  width: 100% !important;
+  display: block !important;
+  margin: 1rem 0;
+}
+
+.vertical-stack-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem;
+  align-items: center;
+  max-width: 100%;
+}
+
+.vertical-stack-item {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vertical-stack-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.vertical-stack-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.vertical-stack-video-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.vertical-stack-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive adjustments for vertical stack */
+@media screen and (max-width: 749px) {
+  .vertical-stack-container {
+    gap: 0.75rem;
+  }
+  
+  .vertical-stack-item {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .vertical-stack-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Pure Integrity Label Styling */
+.container-page-style-two {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  padding: 3rem 0;
+  margin: 2rem 0;
+}
+
+.container-page-style-two h2 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+}
+
+.container-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.product-content-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0;
+}
+
+.product-content-item {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+.product-content-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-content-item .product-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+  padding-bottom: 0;
+}
+
+.product-content-item .product-title {
+  color: #1e3a8a;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.product-content-item .product-text {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive for Pure Integrity Label */
+@media screen and (max-width: 990px) {
+  .product-content-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .product-content-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .container-page-style-two {
+    padding: 2rem 0;
+  }
+  
+  .container-page-style-two h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .product-content-item {
+    padding: 1.5rem;
+  }
+  
+  .product-content-item .product-title {
+    font-size: 1.1rem;
+  }
+}
