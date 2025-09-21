@@ -1,0 +1,218 @@
+/* Pure Integrity Label Section - Blue Background Theme */
+.pure-integrity-section {
+  margin: 0;
+  background: #1e3a8a;
+  padding: 2rem 0;
+}
+
+.pure-integrity-section .title-wrapper-with-link {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.pure-integrity-section .title {
+  margin-bottom: 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* Container matching original */
+.pure-integrity-slider-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Desktop Grid Layout - White Cards */
+.pure-integrity-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0;
+}
+
+.pure-integrity-item {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: #1e3a8a;
+}
+
+.pure-integrity-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.pure-integrity-icon {
+  margin-bottom: 1.5rem;
+}
+
+.pure-integrity-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 0;
+}
+
+.pure-integrity-title {
+  color: #1e3a8a;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+.pure-integrity-text {
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pure-integrity-text p {
+  margin: 0;
+  color: #1e3a8a;
+}
+
+.pure-integrity-mobile-hint {
+  display: none;
+  text-align: center;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Tablet Layout */
+@media screen and (max-width: 990px) {
+  .pure-integrity-slider {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Slider Layout - Blue Background */
+@media screen and (max-width: 749px) {
+  .pure-integrity-section {
+    padding: 2rem 0;
+  }
+  
+  .pure-integrity-section .title-wrapper-with-link {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .pure-integrity-section .title {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .pure-integrity-slider-wrapper {
+    padding: 0;
+  }
+  
+  .pure-integrity-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    grid-template-columns: none;
+  }
+  
+  .pure-integrity-item {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    margin-bottom: 0;
+    background: white;
+    color: #1e3a8a;
+  }
+  
+  .pure-integrity-title {
+    font-size: 1.1rem;
+    color: #1e3a8a;
+  }
+  
+  .pure-integrity-text {
+    color: #1e3a8a;
+  }
+  
+  .pure-integrity-text p {
+    color: #1e3a8a;
+  }
+  
+  .pure-integrity-mobile-hint {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Custom scrollbar for mobile */
+  .pure-integrity-slider::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .pure-integrity-slider::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+  
+  .pure-integrity-slider::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+  }
+  
+  .pure-integrity-slider::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Active state for dragging */
+  .pure-integrity-slider.active {
+    cursor: grabbing;
+  }
+  
+  .pure-integrity-slider.active .pure-integrity-item {
+    pointer-events: none;
+  }
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 480px) {
+  .pure-integrity-section {
+    padding: 1.5rem 0;
+  }
+  
+  .pure-integrity-section .title {
+    font-size: 1.8rem;
+  }
+  
+  .pure-integrity-item {
+    flex: 0 0 260px;
+    padding: 1.2rem;
+  }
+  
+  .pure-integrity-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .pure-integrity-title {
+    font-size: 1rem;
+  }
+  
+  .pure-integrity-text {
+    font-size: 0.9rem;
+  }
+}

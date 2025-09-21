@@ -1,0 +1,205 @@
+{{ 'pure-integrity-label.css' | asset_url | stylesheet_tag }}
+
+<div class="pure-integrity-section color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {% if product.metafields.custom.product_layout_content_title_5 %}
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+          {{ product.metafields.custom.product_layout_content_title_5 | metafield_tag }}
+        </h2>
+      </div>
+    {% endif %}
+
+    <div class="pure-integrity-slider-wrapper">
+      {% assign icons = product.metafields.custom.product_layout_content_item_icon_51.value %}
+      {% assign titles = product.metafields.custom.product_layout_content_item_title_51.value %}
+      {% assign texts = product.metafields.custom.product_layout_content_item_text_51.value %}
+
+      {% if icons and titles and texts %}
+        <div class="pure-integrity-slider" id="pure-integrity-slider">
+          {% for icon in icons %}
+            {% assign index = forloop.index0 %}
+            {% assign title = titles[index] %}
+            {% assign text = texts[index] %}
+
+            <div class="pure-integrity-item">
+              <div class="pure-integrity-icon">
+                <img src="https://belnutris.com/cdn/shop/{{ icon }}" alt="{{ title }}" loading="lazy">
+              </div>
+
+              <h3 class="pure-integrity-title">{{ title }}</h3>
+
+              <div class="pure-integrity-text">
+                <p>{{ text }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="pure-integrity-mobile-hint">
+          <span>Vuốt để xem thêm →</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.getElementById('pure-integrity-slider');
+    if (!slider) return;
+
+    // Touch handling for better mobile experience
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let startTime;
+    let endTime;
+
+    // Mouse events
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+      startTime = Date.now();
+    });
+
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch events for mobile
+    slider.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      scrollLeft = slider.scrollLeft;
+      startTime = Date.now();
+    });
+
+    slider.addEventListener('touchmove', (e) => {
+      if (!startX) return;
+      const x = e.touches[0].clientX;
+      const walk = (startX - x) * 2;
+      slider.scrollLeft = scrollLeft + walk;
+    });
+
+    slider.addEventListener('touchend', () => {
+      startX = null;
+      endTime = Date.now();
+    });
+
+    // Auto-scroll hint on mobile
+    if (window.innerWidth <= 749 && slider.children.length > 1) {
+      setTimeout(() => {
+        const itemWidth = slider.children[0].offsetWidth + 16; // Include gap
+        slider.scrollTo({
+          left: itemWidth * 0.5,
+          behavior: 'smooth',
+        });
+
+        setTimeout(() => {
+          slider.scrollTo({
+            left: 0,
+            behavior: 'smooth',
+          });
+        }, 1500);
+      }, 1000);
+    }
+  });
+</script>
+
+<style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Pure Integrity Label",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    },
+    {
+      "type": "paragraph",
+      "content": "This section automatically pulls content from product metafields: product_layout_content_title_5, product_layout_content_item_icon_51, product_layout_content_item_title_51, and product_layout_content_item_text_51."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pure Integrity Label"
+    }
+  ]
+}
+{% endschema %}

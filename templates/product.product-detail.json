@@ -179,9 +179,9 @@
         "collapsible_tab_DMXfh6"
       ],
       "custom_css": [
-        "slider-component {max-height: 560px;}",
-        ".product__media-list .media-type-image .product__media {height: 560px;}",
-        "slider-component img {max-height: 450px; object-fit: contain; border: 0;}",
+        "slider-component {max-height: none;}",
+        ".product__media-list .media-type-image .product__media {height: auto;}",
+        "slider-component img {max-height: none; object-fit: contain; border: 0;}",
         "slider-component .media-type-image {border: 0;}",
         ".thumbnail img {max-width: 50px; max-height: 50px;}",
         ".thumbnail {box-shadow: none; border-radius: px;}",
@@ -206,17 +206,23 @@
         "padding_bottom": 52
       }
     },
-    "custom_liquid_879bD3": {
-      "type": "custom-liquid",
-      "custom_css": [
-        ".product-icon {width: 60px; height: auto; max-width: 100%; padding-bottom: 20px;}"
-      ],
-      "name": "Pure Integrity Label",
+    "pure_integrity_label_new": {
+      "type": "pure-integrity-label",
       "settings": {
-        "custom_liquid": "{% if product.metafields.custom.product_layout_content_title_5 %}\n<div class=\"container-page-style-two\">\n    <h2>{{ product.metafields.custom.product_layout_content_title_5 | metafield_tag }}</h2>\n    <div class=\"container-wrap\">\n        {% assign icons = product.metafields.custom.product_layout_content_item_icon_51.value %}\n        {% assign titles = product.metafields.custom.product_layout_content_item_title_51.value %}\n        {% assign texts = product.metafields.custom.product_layout_content_item_text_51.value %}\n\n        {% if icons and titles and texts %}\n        <div class=\"product-content-list\">\n            {% for icon in icons %}\n                {% assign index = forloop.index0 %}\n                {% assign title = titles[index] %}\n                {% assign text = texts[index] %}\n\n                <div class=\"product-content-item\">\n                    <img src=\"https://belnutris.com/cdn/shop/{{ icon }}\" alt=\"{{ title }}\" class=\"product-icon\">\n                    <h4 class=\"product-title\">{{ title }}</h4>\n                    <p class=\"product-text\">{{ text }}</p>\n                </div>\n            {% endfor %}\n        </div>\n        {% endif %}\n    </div>\n</div>\n{% endif %}",
-        "color_scheme": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
         "padding_top": 48,
-        "padding_bottom": 0
+        "padding_bottom": 48
+      }
+    },
+    "product_info_section_xVQLw9": {
+      "type": "product-info-section",
+      "name": "Product Info Section",
+      "settings": {
+        "color_scheme": "background-1",
+        "heading_size": "h1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "custom_liquid_Fq83mt": {
@@ -287,11 +293,22 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_h6Pn6Y": {
-      "type": "custom-liquid",
-      "name": "Produktdetails",
+    "product_details_faqs_h6Pn6Y": {
+      "type": "product-details-faqs",
+      "name": "Product Details & FAQs",
       "settings": {
-        "custom_liquid": "{% if product.metafields.custom.product_layout_product_detail.value %}\n<div class=\"container-page-product-detail\">\n    <h2>Produktdetails:</h2>\n    <div class=\"container-wrap\">\n        {% assign details = product.metafields.custom.product_layout_product_detail.value %}\n\n        {% if details %}\n        <div class=\"detail-list\">\n            {% for item in details %}\n                <p>{{ item }}</p>\n            {% endfor %}\n        </div>\n        {% endif %}\n    </div>\n</div>\n{% endif %}",
+        "faq_title_1": "Sản phẩm này có sẵn không?",
+        "faq_content_1": "Các sản phẩm của chúng tôi luôn có sẵn hàng với số lượng lớn. Nếu bạn có nhu cầu mua số lượng lớn hoặc mong muốn trở thành CTV bán hàng của chúng tôi, xin vui lòng liên hệ theo số hotline 0823.289.898 để được hỗ trợ.",
+        "faq_image_1": "shopify://shop_images/senior-runners-stretching-legs-2023-11-27-04-58-14-utc.webp",
+        "faq_title_2": "Làm thế nào để sử dụng sản phẩm?",
+        "faq_content_2": "Hướng dẫn sử dụng chi tiết được in trên bao bì sản phẩm. Bạn cũng có thể tham khảo hướng dẫn trên website hoặc liên hệ với chúng tôi để được tư vấn cụ thể.",
+        "faq_image_2": "shopify://shop_images/runner-group-friends-and-city-on-road-with-talkin-2023-11-27-05-31-46-utc.webp",
+        "faq_title_3": "Sản phẩm có tác dụng phụ không?",
+        "faq_content_3": "Sản phẩm được nghiên cứu và kiểm nghiệm kỹ lưỡng, an toàn cho sức khỏe. Tuy nhiên, nếu bạn có tiền sử bệnh lý hoặc đang dùng thuốc điều trị, vui lòng tham khảo ý kiến bác sĩ trước khi sử dụng.",
+        "faq_image_3": "shopify://shop_images/boy-drinking-milk-2023-11-27-05-16-28-utc.webp",
+        "faq_title_4": "Chính sách đổi trả như thế nào?",
+        "faq_content_4": "Chúng tôi hỗ trợ đổi trả trong vòng 30 ngày kể từ ngày mua hàng với điều kiện sản phẩm còn nguyên seal, chưa sử dụng. Chi tiết vui lòng xem thêm tại trang Chính sách đổi trả.",
+        "faq_image_4": "shopify://shop_images/Design_ohne_Titel_2.png",
         "color_scheme": "",
         "padding_top": 48,
         "padding_bottom": 0
@@ -527,14 +544,15 @@
   "order": [
     "volume_discount_banner_dyz39D",
     "main",
-    "custom_liquid_879bD3",
+    "pure_integrity_label_new",
+    "product_info_section_xVQLw9",
     "custom_liquid_Fq83mt",
     "custom_liquid_TmtJ7X",
     "custom_liquid_J9pBgn",
     "custom_liquid_6iP44m",
     "custom_liquid_XgzNRw",
     "custom_liquid_eUkjqw",
-    "custom_liquid_h6Pn6Y",
+    "product_details_faqs_h6Pn6Y",
     "custom_liquid_kNLPyd",
     "custom_liquid_hRpxz9",
     "related-products",

@@ -1745,7 +1745,7 @@ a.product__text {
   }
   
   .article-image {
-    height: 180px;
+    height: 320px;
   }
   
   .article-content {
@@ -1999,69 +1999,236 @@ a.product__text {
   }
 }
 
-/* Vertical Stack Gallery Layout */
-.product--vertical_stack media-gallery {
-  display: none !important;
-}
-
-.vertical-stack-gallery {
-  width: 100% !important;
-  display: block !important;
-  margin: 1rem 0;
-}
-
-.vertical-stack-container {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 1rem;
-  align-items: center;
-  max-width: 100%;
-}
-
-.vertical-stack-item {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.vertical-stack-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.vertical-stack-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.vertical-stack-video-wrapper {
-  width: 100%;
-  position: relative;
-}
-
-.vertical-stack-video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Responsive adjustments for vertical stack */
+/* Mobile Gallery Optimization */
 @media screen and (max-width: 749px) {
-  .vertical-stack-container {
-    gap: 0.75rem;
+  /* Grid layout adjustments for mobile */
+  .product.grid {
+    display: flex !important;
+    flex-direction: column !important;
   }
   
-  .vertical-stack-item {
+  .product__media-wrapper {
+    position: relative;
+    overflow: visible;
+    margin-bottom: 0;
+    order: 1;
+  }
+  
+  /* Show collapsible content on mobile but position it properly */
+  .product__media-collapsible {
+    display: block !important;
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    order: 2;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .product__info-wrapper {
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 1rem 0 0 0 !important;
+    order: 3;
+  }
+  
+  /* Force slider on mobile for all images with aspect ratio */
+  .product__media-list {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    height: auto; /* Let it size naturally */
+    min-height: 300px;
+  }
+  
+  .product__media-item {
+    flex: 0 0 100%;
     max-width: 100%;
+    scroll-snap-align: start;
+    height: auto; /* Let it size naturally */
+    aspect-ratio: 1 / 1; /* Square aspect ratio */
+  }
+  
+  .product__media-item img,
+  .product__media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Show full image, don't crop */
+    background: white;
+  }
+  
+  /* Hide thumbnails on mobile - show only main slider */
+  .thumbnail-slider {
+    display: none !important;
+  }
+  
+  /* Hide slider buttons and replace with dots */
+  .slider-buttons {
+    display: none !important;
+  }
+  
+  /* Dots indicator for mobile slider */
+  .mobile-slider-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 0.5rem;
+    background: white;
+  }
+  
+  .mobile-slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(var(--color-foreground), 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-slider-dot.active {
+    background: rgba(var(--color-foreground), 0.8);
+    transform: scale(1.2);
+  }
+  
+  /* Mobile slider styling */
+  .slider-mobile-gutter {
+    padding: 0 1rem;
+    position: relative;
+  }
+  
+  /* Hide vertical stack on mobile */
+  .vertical-stack-gallery {
+    display: none !important;
+  }
+  
+  /* Show mobile slider */
+  .mobile-slider-gallery {
+    display: block !important;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Ensure media gallery doesn't interfere with other content */
+  media-gallery {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+  
+  /* Accordion styling for mobile */
+  .product__accordion {
+    margin-bottom: 1rem;
+  }
+  
+  .product__accordion summary {
+    padding: 1rem;
+    background: rgba(var(--color-base-background-2), 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(var(--color-base-outline-button-labels), 0.1);
+  }
+  
+  .product__accordion .accordion__content {
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background: rgba(var(--color-base-background-1), 1);
+    border-radius: 0 0 8px 8px;
+  }
+  
+  /* Collapsible tabs title */
+  .collapsible-tabs-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: rgba(var(--color-foreground), 0.9);
   }
 }
 
+/* Tablet range specific fixes (481px to 749px) */
+@media screen and (min-width: 481px) and (max-width: 749px) {
+  .product__media-item {
+    aspect-ratio: 4 / 3; /* Better aspect ratio for tablets */
+    min-height: 350px;
+  }
+  
+  .product__media-list {
+    min-height: 350px;
+  }
+}
+
+/* Desktop - Vertical Stack Gallery Layout */
 @media screen and (min-width: 750px) {
+  /* Hide mobile slider on desktop */
+  .mobile-slider-gallery {
+    display: none !important;
+  }
+  
+  /* Hide mobile dots on desktop */
+  .mobile-slider-dots {
+    display: none !important;
+  }
+  
+  /* Show vertical stack on desktop when layout is vertical_stack */
+  .product--vertical_stack .vertical-stack-gallery {
+    display: block !important;
+  }
+  
+  .product--vertical_stack media-gallery {
+    display: none !important;
+  }
+
+  .vertical-stack-gallery {
+    width: 100% !important;
+    display: block !important;
+    margin: 1rem 0;
+  }
+
+  .vertical-stack-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .vertical-stack-item {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .vertical-stack-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .vertical-stack-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .vertical-stack-video-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .vertical-stack-video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .vertical-stack-container {
     gap: 1.5rem;
   }
@@ -2145,8 +2312,40 @@ a.product__text {
 
 @media screen and (max-width: 749px) {
   .product-content-list {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-content-item {
+    flex: 0 0 280px; /* Fixed width for slider items */
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  /* Scrollbar styling for mobile slider */
+  .product-content-list::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .product-content-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+  }
+  
+  .product-content-list::-webkit-scrollbar-thumb {
+    background: #1e3a8a;
+    border-radius: 2px;
+  }
+  
+  .product-content-list::-webkit-scrollbar-thumb:hover {
+    background: #1e40af;
   }
   
   .container-page-style-two {
@@ -2156,13 +2355,138 @@ a.product__text {
   .container-page-style-two h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-  }
-  
-  .product-content-item {
-    padding: 1.5rem;
+    padding: 0 1rem;
   }
   
   .product-content-item .product-title {
     font-size: 1.1rem;
+  }
+  
+  /* Add slider indicator dots */
+  .container-wrap::after {
+    content: "Vuốt để xem thêm →";
+    display: block;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+}
+
+/* Mobile Collapsible Tabs Control */
+/* Hide mobile version on desktop */
+.product__info-collapsible {
+  display: none;
+}
+
+/* Show mobile version only on mobile, hide desktop version */
+@media screen and (max-width: 749px) {
+  .product__media-collapsible {
+    display: none !important;
+  }
+  
+  .product__info-collapsible {
+    display: block;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(var(--color-foreground), 0.1);
+    padding-top: 1.5rem;
+  }
+  
+  /* Copy all collapsible styling for mobile version */
+  .product__info-collapsible .product__accordion {
+    border: none;
+    margin-bottom: 0.5rem;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .product__info-collapsible .product__accordion:last-child {
+    border-bottom: none;
+  }
+
+  .product__info-collapsible .product__accordion summary {
+    background: #1e3a8a;
+    color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 0;
+    margin: 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    list-style: none;
+  }
+
+  .product__info-collapsible .product__accordion summary:hover {
+    background: #1e40af;
+  }
+
+  .product__info-collapsible .product__accordion[open] summary {
+    background: #1e40af;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .product__info-collapsible .product__accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .product__info-collapsible .product__accordion summary::marker {
+    content: '';
+  }
+
+  .product__info-collapsible .product__accordion summary .summary__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    margin: 0;
+  }
+
+  .product__info-collapsible .product__accordion summary .summary__title .accordion__title {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .product__info-collapsible .product__accordion summary svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+  }
+
+  .product__info-collapsible .product__accordion[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  .product__info-collapsible .accordion__content {
+    background: white;
+    padding: 1.2rem;
+    margin: 0;
+    border-left: 3px solid #1e3a8a;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  .product__info-collapsible .summary__title .icon-accordion {
+    display: none;
+  }
+  
+  .product__info-collapsible .collapsible-tabs-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 }
