@@ -17,6 +17,7 @@ product-info {
 
 .product__media-wrapper {
   padding-left: 0;
+  padding-right: 60px;
 }
 
 @media screen and (min-width: 750px) {
@@ -1361,6 +1362,7 @@ a.product__text {
 .product-media-container .product__modal-opener {
   display: block;
   position: relative;
+  width: 100%;
 }
 
 @media screen and (min-width: 750px) {
@@ -2231,6 +2233,330 @@ a.product__text {
 
   .vertical-stack-container {
     gap: 1.5rem;
+  }
+
+  /* Mixed Layout Styles - Using Slick Carousel */
+  .product--mixed_layout .mixed-layout-gallery {
+    display: block !important;
+  }
+  
+  .product--mixed_layout media-gallery {
+    display: none !important;
+  }
+
+  /* Override the media-gallery display for mixed layout slider */
+  .product--mixed_layout .mixed-layout-slider media-gallery {
+    display: block !important;
+  }
+
+  .mixed-layout-gallery {
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .mixed-layout-slider {
+    width: 100%;
+    margin-bottom: 6rem;
+    position: relative;
+    display: block;
+    overflow: hidden; /* This is crucial for single slide display */
+    min-height: 400px; /* Ensure minimum height */
+  }
+
+  /* Equal height slides - will be set by JavaScript */
+  .mixed-layout-slider.equal-height-initialized .product__media-item,
+  .mixed-layout-slider.equal-height-initialized .product__media {
+    height: var(--slides-max-height) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mixed-layout-slider.equal-height-initialized .product-media-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mixed-layout-slider .product__media-list {
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    overflow: visible; /* Allow the slides wrapper to be visible */
+    display: block !important; /* Change to block to let JS handle the flex */
+    cursor: grab;
+    user-select: none;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: inherit;
+  }
+
+  .mixed-layout-slider .product__media-list::after {
+    display: none;
+  }
+
+  .mixed-layout-slider .product__media-list:active {
+    cursor: grabbing;
+  }
+
+  /* Ensure slides take full container width individually */
+  .mixed-layout-slider .product__media-item,
+  .mixed-layout-slider .product__media {
+    flex: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .mixed-layout-slider .product__media-item img,
+  .mixed-layout-slider .product__media-item video,
+  .mixed-layout-slider .product__media img,
+  .mixed-layout-slider .product__media video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 600px;
+    user-select: none;
+    -webkit-user-drag: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Slick Carousel Overrides */
+  .mixed-layout-slider .slick-list {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  .mixed-layout-slider .slick-list:active {
+    cursor: grabbing;
+  }
+
+  .mixed-layout-slider .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .mixed-layout-slider .slick-slide {
+    height: auto;
+    outline: none;
+    user-select: none;
+  }
+
+  .mixed-layout-slider .slick-slide > div {
+    height: 100%;
+  }
+
+  .mixed-layout-slider .product__media-item,
+  .mixed-layout-slider .product__media {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    outline: none;
+  }
+
+  .mixed-layout-slider .product__media-item img,
+  .mixed-layout-slider .product__media-item video,
+  .mixed-layout-slider .product__media img,
+  .mixed-layout-slider .product__media video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 600px;
+    user-select: none;
+    -webkit-user-drag: none;
+    border-radius: 0;
+  }
+
+  /* Navigation Buttons */
+  .mixed-layout-slider .slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+  }
+
+  .mixed-layout-slider .slider-button {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
+  }
+
+  .mixed-layout-slider .slider-button:hover,
+  .mixed-layout-slider .slider-button:focus {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    outline: 2px solid rgba(var(--color-foreground), 0.5);
+  }
+
+  .mixed-layout-slider .slider-button svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: currentColor;
+  }
+
+  /* Dots Navigation */
+  .mixed-layout-slider-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: -5.2rem;
+        padding: 2rem;
+        z-index: 1;
+        position: relative;
+  }
+
+  .mixed-layout-slider-dot {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: #FFFFFF33;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        padding: 0;
+        outline: none;
+  }
+
+  .mixed-layout-slider-dot.active,
+  .mixed-layout-slider-dot:hover {
+    background-color: #fff;
+  }
+
+  .mixed-layout-slider-dot:focus {
+    outline: 2px solid rgba(var(--color-foreground), 0.5);
+    outline-offset: 2px;
+  }
+
+  /* Counter */
+  .mixed-layout-slider .slider-counter {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 10;
+  }
+
+  /* Focus styles for accessibility */
+  .mixed-layout-slider:focus {
+    outline: 2px solid rgba(var(--color-foreground), 0.5);
+    outline-offset: 2px;
+  }
+
+  /* Vertical Stack Section */
+  .mixed-layout-stack {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .mixed-layout-stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .mixed-layout-stack-item {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .mixed-layout-stack-item:first-child {
+    display: none; /* Hide first item to avoid duplication with slider */
+  }
+
+  .mixed-layout-stack-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .mixed-layout-stack-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 767px) {
+    .mixed-layout-slider {
+      margin-bottom: 1rem;
+    }
+    
+    .mixed-layout-slider .slider-button {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    
+    .mixed-layout-slider .slider-button svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+    
+    .mixed-layout-slider-dots {
+      margin-top: 1rem;
+      gap: 0.6rem;
+    }
+    
+    .mixed-layout-slider-dot {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+    
+    .mixed-layout-stack-container {
+      gap: 1rem;
+    }
+  }
+
+  .mixed-layout-stack-video-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .mixed-layout-stack-video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 

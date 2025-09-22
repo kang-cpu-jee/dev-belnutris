@@ -42,6 +42,7 @@
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'mobile-slider-dots.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'mixed-layout-slider.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
@@ -2457,6 +2458,10 @@
         {
           "value": "vertical_stack",
           "label": "Vertical Stack Images"
+        },
+        {
+          "value": "mixed_layout",
+          "label": "First Image Slider + Others Stacked"
         }
       ],
       "default": "stacked",

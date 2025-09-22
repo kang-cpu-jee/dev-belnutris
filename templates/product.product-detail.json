@@ -196,7 +196,7 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "vertical_stack",
+        "gallery_layout": "mixed_layout",
         "media_position": "left",
         "image_zoom": "none",
         "mobile_thumbnails": "show",
