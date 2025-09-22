@@ -19,10 +19,10 @@ class VolumeDiscountBanner {
 
     // Discount mapping: quantity -> discount level
     this.discountMapping = {
-      1: { level: 0, progress: 0 },    // 1x = OFF (0%)
-      2: { level: 1, progress: 25 },   // 2x = 5%
-      3: { level: 2, progress: 66 },   // 3x = 10%
-      4: { level: 3, progress: 100 }   // >3x = 15%
+      1: { level: 0, progress: 'calc(3.5% + 18px)' },    // 1x = OFF (0%)
+      2: { level: 1, progress: 'calc(35% + 8px)' },   // 2x = 5%
+      3: { level: 2, progress: 'calc(65% + 14px)' },   // 3x = 10%
+      4: { level: 3, progress: 'calc(96% + 14px)' }   // >3x = 15%
     };
 
     this.attachQuantityListener();
@@ -36,25 +36,43 @@ class VolumeDiscountBanner {
 
     const discount = this.discountMapping[mappedQty];
     
-    // Update progress bar
+    // Update progress bar with smooth animation
     if (this.progressFill) {
-      this.progressFill.style.width = discount.progress + '%';
+      // Add a slight delay for more dramatic effect
+      setTimeout(() => {
+        this.progressFill.style.width = discount.progress;
+      }, 100);
     }
 
-    // Update labels
+    // Update labels with staggered animation
     this.labels.forEach((label, index) => {
-      label.classList.toggle('active', index === discount.level);
+      setTimeout(() => {
+        label.classList.toggle('active', index === discount.level);
+      }, index * 50);
     });
 
-    // Update badges
-    this.badges.forEach(badge => {
+    // Update badges with smooth transitions
+    this.badges.forEach((badge, index) => {
       const badgeQty = parseInt(badge.dataset.qty);
-      badge.classList.remove('active', 'highlighted');
       
-      if (badgeQty === mappedQty) {
-        badge.classList.add('highlighted');
-      }
+      setTimeout(() => {
+        badge.classList.remove('active', 'highlighted');
+        
+        if (badgeQty === mappedQty) {
+          badge.classList.add('highlighted');
+        } else if (badgeQty < mappedQty) {
+          badge.classList.add('active');
+        }
+      }, index * 80);
     });
+
+    // Add pulse effect to progress bar when it updates
+    if (this.progressFill) {
+      this.progressFill.style.animation = 'none';
+      setTimeout(() => {
+        this.progressFill.style.animation = 'progressPulse 0.6s ease-out';
+      }, 200);
+    }
   }
 
   attachQuantityListener() {
