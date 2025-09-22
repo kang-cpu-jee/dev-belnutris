@@ -140,44 +140,6 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
-      },
-      "websensepro-custom-font": {
-        "type": "websensepro-custom-font",
-        "blocks": {
-          "image_DPrLXB": {
-            "type": "image",
-            "settings": {
-              "name": "customfont",
-              "custom_font_weight": "none",
-              "custom_font_url": "https://cdn.shopify.com/s/files/1/0880/9775/1387/files/AdelleSans-Semibold.woff?v=1727664070",
-              "apply_h1": true,
-              "apply_h2": true,
-              "apply_h3": true,
-              "apply_h4": true,
-              "apply_h5": true,
-              "apply_h6": true,
-              "apply_span": true,
-              "apply_p": true,
-              "apply_a": true,
-              "apply_input": true,
-              "apply_label": true,
-              "apply_legend": true,
-              "apply_button": true,
-              "apply_summary": true,
-              "apply_select": true,
-              "apply_option": true,
-              "apply_small": true,
-              "apply_custom": "div{\nfont-family: 'customfont' !important;\n}",
-              "apply_div": true
-            }
-          }
-        },
-        "block_order": [
-          "image_DPrLXB"
-        ],
-        "settings": {
-          "enable": true
-        }
       }
     },
     "content_for_index": [],

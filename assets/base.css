@@ -1,66 +1,4 @@
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-Regular.ttf' | asset_url }}") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-Italic.ttf' | asset_url }}") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-Light.ttf' | asset_url }}") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-LightItalic.ttf' | asset_url }}") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-Semibold.ttf' | asset_url }}") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-SemiboldItalic.ttf' | asset_url }}") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-Bold.ttf' | asset_url }}") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  src: url("{{ 'AdelleSansEXT-BoldItalic.ttf' | asset_url }}") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
       
       * {
         font-family: "Adelle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif !important;
@@ -81,6 +19,11 @@
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+}
+
+/* Force Adelle Sans font override */
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, a, button, input, textarea, select {
+  font-family: "Adelle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif !important;
 }
 
 .product-card-wrapper .card,
@@ -4459,4 +4402,35 @@ share-button.share-button{
   .container-page-style-one h2 {
     margin-bottom: 10px;
   }
+}
+
+/* ADELLE SANS FONT OVERRIDE - FORCE LOAD */
+html * {
+  font-family: "Adelle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif !important;
+}
+
+body, body * {
+  font-family: "Adelle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif !important;
+}
+
+/* Specific element overrides */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Adelle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+p, span, div, a, button, input, textarea, select, label, li, td, th {
+  font-family: "Adelle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif !important;
+}
+
+/* Debug CSS - temporary */
+.debug-font-check::before {
+  content: "Font: " attr(data-font);
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  padding: 5px;
+  z-index: 9999;
 }
