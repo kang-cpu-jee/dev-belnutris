@@ -102,7 +102,7 @@
             "icon_3": "none",
             "image_3": "shopify://shop_images/Group_13717.png",
             "heading_3": "Reich an Calcium & Vitamin D für Knochen & Bewegungsapparat",
-            "custom_class": ""
+            "custom_class": "icon-l"
           }
         },
         "icon_with_text_RBmJtQ": {
@@ -185,7 +185,7 @@
         "slider-component .media-type-image {border: 0;}",
         ".thumbnail img {max-width: 50px; max-height: 50px;}",
         ".thumbnail {box-shadow: none; border-radius: px;}",
-        ".category {font-size: 18px; line-height: 24px; color: #07478a;}",
+        ".category {font-size: 18px; line-height: 24px; color: #07478a;}"
       ],
       "settings": {
         "collapsible_tabs_title": "PRODUKTDETAILS",
