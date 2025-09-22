@@ -46,6 +46,37 @@
   transform: rotate(180deg);
 }
 
+/* Plus/Minus Toggle Icons */
+.accordion-toggle-icons {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.accordion-toggle-icons svg {
+  height: calc(var(--font-heading-scale) * 0.6rem);
+  width: calc(var(--font-heading-scale) * 0.6rem);
+  fill: rgb(var(--color-foreground));
+}
+
+/* Show plus icon by default, hide minus */
+.accordion .icon-plus {
+  display: block;
+}
+
+.accordion .icon-minus {
+  display: none;
+}
+
+/* When accordion is open, show minus and hide plus */
+.accordion details[open] .icon-plus {
+  display: none;
+}
+
+.accordion details[open] .icon-minus {
+  display: block;
+}
+
 .accordion__content {
   margin-bottom: 1.5rem;
   word-break: break-word;
